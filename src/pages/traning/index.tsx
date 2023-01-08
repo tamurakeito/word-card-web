@@ -51,7 +51,7 @@ export const Training = ({ data }: { data: Array<Question> }) => {
         <div className="card">
           <span>
             {question.answer.map((item) => (
-              <Text type="body">{item}</Text>
+              <Text type="comment">{item}</Text>
             ))}
           </span>
         </div>

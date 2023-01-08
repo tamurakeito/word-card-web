@@ -1,5 +1,4 @@
 import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
-import "./App.scss";
 import Data from "data/kokushi-yokomoji.json";
 import { Home } from "pages/home";
 import { Training } from "pages/traning";

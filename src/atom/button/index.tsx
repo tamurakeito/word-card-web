@@ -18,7 +18,7 @@ export const Button = ({
       : classNames(["button", ...classes])
     : bottomFix
     ? classNames(["button", "bottom-fixed"])
-    : "Button";
+    : "button";
   return (
     <div className={clazz} onClick={onClick}>
       {value}
