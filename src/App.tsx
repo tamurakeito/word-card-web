@@ -20,8 +20,11 @@ export default App;
 const RouterSelector = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home data={Data.data} />} />
-      <Route path="/training" element={<Training data={Data.data} />} />
+      <Route path="/word-card-web" element={<Home data={Data.data} />} />
+      <Route
+        path="/word-card-web/training"
+        element={<Training data={Data.data} />}
+      />
     </Routes>
   );
 };
