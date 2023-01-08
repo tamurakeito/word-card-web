@@ -53,7 +53,7 @@ export const Home = ({ data }: { data: Array<Question> }) => {
       <Button
         value="ミニテスト"
         onClick={() => {
-          navigation("/training");
+          navigation("/word-card-web/training");
         }}
         classes={["home-button"]}
         bottomFix={true}

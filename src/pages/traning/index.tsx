@@ -93,7 +93,7 @@ export const Training = ({ data }: { data: Array<Question> }) => {
       <Button
         value="もどる"
         onClick={() => {
-          navigation("/");
+          navigation("/word-card-web");
         }}
         bottomFix={true}
       />
