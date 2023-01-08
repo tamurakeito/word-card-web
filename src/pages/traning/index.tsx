@@ -77,7 +77,7 @@ export const Training = ({ data }: { data: Array<Question> }) => {
           <div
             className="retry"
             onClick={() => {
-              navigation("/training");
+              navigation("/word-card-web/training");
             }}
           >
             <div>
