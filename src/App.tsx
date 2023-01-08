@@ -6,7 +6,7 @@ import { Training } from "pages/traning";
 const App = () => {
   return (
     <div className="App">
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <RouterSelector />
       </Router>
     </div>
