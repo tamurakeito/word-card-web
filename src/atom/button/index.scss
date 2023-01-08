@@ -1,0 +1,15 @@
+.button {
+  color: #fff;
+  background: #111;
+  text-align: center;
+  border-radius: 3px;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 7px;
+  &.bottom-fixed {
+    z-index: 2;
+    position: fixed;
+    bottom: 5px;
+    width: calc(100% - 30px);
+  }
+}

@@ -1,0 +1,36 @@
+.home {
+  .list-node {
+    padding: {
+      top: 5px;
+    }
+    .node-head {
+      position: relative;
+      border: 1px solid #777;
+      .toggle {
+        font-size: 20px;
+        position: absolute;
+        top: 7px;
+        left: 7px;
+        transition: 0.2s;
+      }
+    }
+    .node-body {
+      border: 1px solid #777;
+      border-top: none;
+      padding: 0 10px;
+      opacity: 0;
+      transition: 0.2s;
+      height: 0;
+    }
+    &.open {
+      .toggle {
+        rotate: 90deg;
+      }
+      .node-body {
+        padding: 5px 10px;
+        height: auto;
+        opacity: 1;
+      }
+    }
+  }
+}

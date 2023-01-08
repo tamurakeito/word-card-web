@@ -1,0 +1,24 @@
+.training {
+  .card,
+  .cover,
+  .retry {
+    width: calc(100% - 16px);
+    height: calc(100vh - 70px);
+    position: fixed;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+  }
+  .card {
+    z-index: 1;
+    &.answer {
+      .disease {
+        display: hidden;
+      }
+    }
+  }
+  .cover {
+    z-index: 2;
+  }
+}
