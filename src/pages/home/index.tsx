@@ -5,6 +5,7 @@ import { Spacer } from "atom/spacer";
 import { Button } from "atom/button";
 import { Question } from "types/types";
 import "./index.scss";
+import { Play } from "react-feather";
 
 export const Home = ({ data }: { data: Array<Question> }) => {
   const ListNode = ({ question }: { question: Question }) => {
@@ -27,7 +28,9 @@ export const Home = ({ data }: { data: Array<Question> }) => {
     return (
       <div className={classes}>
         <div className="node-head" onClick={handleClick}>
-          <div className="toggle">▶</div>
+          <div className="toggle">
+            <Play />
+          </div>
           <Text type="head">{question.question}</Text>
         </div>
         <div className="node-body">

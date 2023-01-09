@@ -25,7 +25,7 @@
     "eject": "react-scripts eject",
     "rm": "rm -rf docs",
     "mv": "mv build docs",
-    "git": "git add .",
+    "git": "git add . && git commit -m 'deploy to github-pages' && git push origin main",
     "deploy": "yarn rm && yarn build && yarn mv && yarn git"
   },
   "eslintConfig": {
@@ -49,6 +49,7 @@
   "devDependencies": {
     "@types/sass": "^1.43.1",
     "classnames": "^2.3.2",
+    "react-feather": "^2.0.10",
     "sass": "^1.57.1"
   }
 }

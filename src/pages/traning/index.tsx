@@ -50,6 +50,7 @@ export const Training = ({ data }: { data: Array<Question> }) => {
       >
         <div className="card">
           <span>
+            <Text type="title">{question.question}</Text>
             {question.answer.map((item) => (
               <Text type="comment">{item}</Text>
             ))}

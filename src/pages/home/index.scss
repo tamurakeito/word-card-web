@@ -6,12 +6,17 @@
     .node-head {
       position: relative;
       border: 1px solid #777;
+      padding: {
+        left: 30px;
+      }
       .toggle {
-        font-size: 20px;
         position: absolute;
-        top: 7px;
-        left: 7px;
+        left: 10px;
+        height: 100%;
         transition: 0.2s;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
       }
     }
     .node-body {
@@ -19,7 +24,7 @@
       border-top: none;
       padding: 0 10px;
       opacity: 0;
-      transition: 0.2s;
+      // transition: 0.2s;
       height: 0;
     }
     &.open {
