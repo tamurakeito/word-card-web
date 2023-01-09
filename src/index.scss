@@ -1,3 +1,7 @@
 body {
-  font-family: HelveticaNeue;
+  font-family: "monospace", "Noto Sans JP", sans-serif;
+  font-feature-settings: "pkna";
+  -webkit-font-feature-settings: "pkna";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
