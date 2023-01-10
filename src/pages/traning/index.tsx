@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Question } from "types/types";
+import { Question, ThemaContent } from "types/types";
 import { Text } from "atom/text";
 import { Button } from "atom/button";
 import "./index.scss";
+import { useThemaContext } from "component/thema-provider";
 
-export const Training = ({ data }: { data: Array<Question> }) => {
+export const Training = () => {
+  const { thema } = useThemaContext();
   const RandomSampling = (data: Array<Question>): Array<Question> => {
     // const [arr, setArr] = useState<Array<Question>>(data);
     const arr: Array<Question> = [];
@@ -87,7 +89,7 @@ export const Training = ({ data }: { data: Array<Question> }) => {
             </div>
           </div>
         )}
-        {RandomSampling(data).map((item, index) => (
+        {RandomSampling(thema.data).map((item, index) => (
           <Card key={index} question={item} />
         ))}
       </div>
