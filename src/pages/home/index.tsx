@@ -56,12 +56,15 @@ export const Home = () => {
           switch (thema.index) {
             case 1:
               setThemaContent(KokushiEnglish);
+              document.title = KokushiEnglish.title;
               return;
             case 2:
               setThemaContent(KokushiSign);
+              document.title = KokushiSign.title;
               return;
             case 3:
               setThemaContent(KokushiYokomoji);
+              document.title = KokushiYokomoji.title;
               return;
             default:
               return;

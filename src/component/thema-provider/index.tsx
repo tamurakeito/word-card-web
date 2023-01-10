@@ -19,9 +19,9 @@ export const ThemaContextProvider = ({ children }: { children: ReactNode }) => {
   const setThemaContent = (headerContent: ThemaContent) => {
     setThema(headerContent);
   };
-  // useEffect(()=>{
-
-  // },[thema])
+  useEffect(() => {
+    document.title = KokushiYokomoji.title;
+  }, []);
   return (
     <ThemaContext.Provider value={{ thema, setThemaContent }}>
       {children}
