@@ -10,6 +10,7 @@ import { useThemaContext } from "component/thema-provider";
 
 import KokushiYokomoji from "data/kokushi-yokomoji.json";
 import KokushiEnglish from "data/kokushi-english.json";
+import KokushiSign from "data/kokushi-sign.json";
 
 export const Home = () => {
   const { thema, setThemaContent } = useThemaContext();
@@ -57,6 +58,9 @@ export const Home = () => {
               setThemaContent(KokushiEnglish);
               return;
             case 2:
+              setThemaContent(KokushiSign);
+              return;
+            case 3:
               setThemaContent(KokushiYokomoji);
               return;
             default:

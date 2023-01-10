@@ -3,18 +3,40 @@
   "title": "【国試対策】医学英語ドリル",
   "data": [
     {
-      "question": "Chvostek徴候",
-      "answer": [
-        "低カルシウム血症が原因で起こる病的反射.",
-        "外耳道の直前で顔面神経を指やハンマーで軽く叩く（頬を軽く刺激する）と, 同側の鼻の左右両端（鼻翼）やまぶた, 上唇などで筋肉がぴくぴく収縮する反射のことをいう."
-      ]
+      "question": "angiography",
+      "answer": ["血管造影"]
     },
     {
-      "question": "Trousseau徴候",
-      "answer": [
-        "低カルシウム血症が原因で起こる病的反射.",
-        "血圧計のマンシェットで収縮期血圧以上に3分間阻血することにより, 手の攣縮を生じる."
-      ]
+      "question": "contrast-enhanced computed tomography",
+      "answer": ["造影CT"]
+    },
+    {
+      "question": "distend",
+      "answer": ["膨れる"]
+    },
+    {
+      "question": "endemic",
+      "answer": ["風土病"]
+    },
+    {
+      "question": "evaluation",
+      "answer": ["評価"]
+    },
+    {
+      "question": "extravasation",
+      "answer": ["血管外漏出"]
+    },
+    {
+      "question": "gastrointerstinal tractography",
+      "answer": ["消化管造影"]
+    },
+    {
+      "question": "nosocomical",
+      "answer": ["院内の"]
+    },
+    {
+      "question": "tender",
+      "answer": ["圧痛のある"]
     }
   ]
 }
