@@ -51,6 +51,7 @@ export const Home = () => {
     <div className="home">
       <div
         onClick={() => {
+          // このテーマの切り替えはproviderの方のファイルに移動させる
           switch (thema.index) {
             case 1:
               setThemaContent(KokushiEnglish);
