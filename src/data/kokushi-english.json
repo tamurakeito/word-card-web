@@ -7,12 +7,20 @@
       "answer": ["血管造影"]
     },
     {
+      "question": "complement",
+      "answer": ["補体"]
+    },
+    {
       "question": "contrast-enhanced computed tomography",
       "answer": ["造影CT"]
     },
     {
       "question": "distend",
       "answer": ["膨れる"]
+    },
+    {
+      "question": "during exertion",
+      "answer": ["労作時"]
     },
     {
       "question": "endemic",
@@ -31,8 +39,28 @@
       "answer": ["消化管造影"]
     },
     {
+      "question": "intercostal space",
+      "answer": ["肋間"]
+    },
+    {
+      "question": "mesothelioma",
+      "answer": ["中皮腫"]
+    },
+    {
       "question": "nosocomical",
       "answer": ["院内の"]
+    },
+    {
+      "question": "pleura",
+      "answer": ["胸膜"]
+    },
+    {
+      "question": "pleural fluid",
+      "answer": ["胸水"]
+    },
+    {
+      "question": "sternum",
+      "answer": ["胸骨"]
     },
     {
       "question": "tender",
