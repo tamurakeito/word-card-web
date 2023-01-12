@@ -51,6 +51,14 @@
       "answer": ["風土病"]
     },
     {
+      "question": "enteric fever",
+      "answer": ["腸チフス"]
+    },
+    {
+      "question": "eschar",
+      "answer": ["（ツツガムシなどの）刺し口"]
+    },
+    {
       "question": "evaluation",
       "answer": ["評価"]
     },
@@ -107,6 +115,14 @@
       "answer": ["気胸"]
     },
     {
+      "question": "rabies",
+      "answer": ["狂犬病"]
+    },
+    {
+      "question": "scrub typhus",
+      "answer": ["ツツガムシ病"]
+    },
+    {
       "question": "sternum",
       "answer": ["胸骨"]
     },
@@ -115,12 +131,20 @@
       "answer": ["圧痛のある"]
     },
     {
+      "question": "tetanus",
+      "answer": ["破傷風"]
+    },
+    {
       "question": "threatened miscarriage",
       "answer": ["切迫流産"]
     },
     {
       "question": "threatened preterm labor",
       "answer": ["切迫早産"]
+    },
+    {
+      "question": "tick borne infection",
+      "answer": ["ダニ媒介感染症"]
     },
     {
       "question": "ureter",

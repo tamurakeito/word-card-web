@@ -10,6 +10,7 @@ import { useThemaContext } from "component/thema-provider";
 import KokushiYokomoji from "data/kokushi-yokomoji.json";
 import KokushiEnglish from "data/kokushi-english.json";
 import KokushiSign from "data/kokushi-sign.json";
+import KokushiDrug from "data/kokushi-drug.json";
 
 export const Home = () => {
   const { thema, setThemaContent } = useThemaContext();
@@ -59,6 +60,10 @@ export const Home = () => {
         document.title = KokushiSign.title;
         return;
       case 3:
+        setThemaContent(KokushiDrug);
+        document.title = KokushiDrug.title;
+        return;
+      case 4:
         setThemaContent(KokushiYokomoji);
         document.title = KokushiYokomoji.title;
         return;
@@ -79,6 +84,7 @@ export const Home = () => {
       {thema.data.map((item, index) => (
         <ListNode key={index} question={item} />
       ))}
+      <Spacer height={120} />
       <div className="home-bottom-fixed">
         <Button
           value="ミニテスト"
