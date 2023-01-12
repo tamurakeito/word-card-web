@@ -9,6 +9,7 @@
       padding: {
         left: 30px;
       }
+      cursor: pointer;
       .toggle {
         position: absolute;
         left: 10px;
@@ -35,6 +36,19 @@
         padding: 5px 18px;
         height: auto;
         opacity: 1;
+      }
+    }
+  }
+  .home-bottom-fixed {
+    z-index: 2;
+    position: fixed;
+    bottom: 0;
+    width: calc(100% - 16px);
+    background: #fff;
+    * {
+      margin: {
+        top: 7px;
+        bottom: 7px;
       }
     }
   }

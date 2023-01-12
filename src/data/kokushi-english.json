@@ -7,12 +7,28 @@
       "answer": ["血管造影"]
     },
     {
+      "question": "asthma",
+      "answer": ["喘息"]
+    },
+    {
+      "question": "bronchiectasis",
+      "answer": ["気管支拡張症"]
+    },
+    {
       "question": "complement",
       "answer": ["補体"]
     },
     {
+      "question": "constipation",
+      "answer": ["便秘"]
+    },
+    {
       "question": "contrast-enhanced computed tomography",
       "answer": ["造影CT"]
+    },
+    {
+      "question": "diarrhea",
+      "answer": ["下痢"]
     },
     {
       "question": "distend",
@@ -21,6 +37,14 @@
     {
       "question": "during exertion",
       "answer": ["労作時"]
+    },
+    {
+      "question": "dyspnea",
+      "answer": ["呼吸困難"]
+    },
+    {
+      "question": "embolism",
+      "answer": ["塞栓症"]
     },
     {
       "question": "endemic",
@@ -39,8 +63,24 @@
       "answer": ["消化管造影"]
     },
     {
+      "question": "hemorrhage",
+      "answer": ["出血"]
+    },
+    {
+      "question": "infarction",
+      "answer": ["梗塞"]
+    },
+    {
+      "question": "inflammation",
+      "answer": ["炎症"]
+    },
+    {
       "question": "intercostal space",
       "answer": ["肋間"]
+    },
+    {
+      "question": "menorrhea",
+      "answer": ["月経"]
     },
     {
       "question": "mesothelioma",
@@ -51,6 +91,10 @@
       "answer": ["院内の"]
     },
     {
+      "question": "pericarditis",
+      "answer": ["心膜炎"]
+    },
+    {
       "question": "pleura",
       "answer": ["胸膜"]
     },
@@ -59,12 +103,36 @@
       "answer": ["胸水"]
     },
     {
+      "question": "pneumothorax",
+      "answer": ["気胸"]
+    },
+    {
       "question": "sternum",
       "answer": ["胸骨"]
     },
     {
       "question": "tender",
       "answer": ["圧痛のある"]
+    },
+    {
+      "question": "threatened miscarriage",
+      "answer": ["切迫流産"]
+    },
+    {
+      "question": "threatened preterm labor",
+      "answer": ["切迫早産"]
+    },
+    {
+      "question": "ureter",
+      "answer": ["尿管"]
+    },
+    {
+      "question": "zoster",
+      "answer": ["帯状疱疹"]
+    },
+    {
+      "question": "-itis",
+      "answer": ["炎症"]
     }
   ]
 }

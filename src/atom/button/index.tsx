@@ -6,19 +6,21 @@ export const Button = ({
   onClick,
   classes,
   bottomFix = false,
+  color = "black",
 }: {
   value: string;
   onClick: () => void;
   classes?: Array<string>;
   bottomFix?: boolean;
+  color?: "black" | "grey";
 }) => {
   const clazz = classes
     ? bottomFix
-      ? classNames(["button", "bottom-fixed", ...classes])
-      : classNames(["button", ...classes])
+      ? classNames(["button", `button__${color}`, "bottom-fixed", ...classes])
+      : classNames(["button", `button__${color}`, ...classes])
     : bottomFix
-    ? classNames(["button", "bottom-fixed"])
-    : "button";
+    ? classNames(["button", `button__${color}`, "bottom-fixed"])
+    : classNames(["button", `button__${color}`]);
   return (
     <div className={clazz} onClick={onClick}>
       {value}
