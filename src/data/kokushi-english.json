@@ -3,16 +3,76 @@
   "title": "【国試対策】医学英語ドリル",
   "data": [
     {
+      "question": "ascites",
+      "answer": ["腹水"]
+    },
+    {
+      "question": "amenorrhea",
+      "answer": ["無月経"]
+    },
+    {
+      "question": "amnesia",
+      "answer": ["健忘症"]
+    },
+    {
+      "question": "aneurysm",
+      "answer": ["動脈瘤"]
+    },
+    {
+      "question": "angina pectoris",
+      "answer": ["狭心症"]
+    },
+    {
       "question": "angiography",
       "answer": ["血管造影"]
+    },
+    {
+      "question": "anorexia",
+      "answer": ["食欲不振"]
+    },
+    {
+      "question": "anuria",
+      "answer": ["貧血"]
+    },
+    {
+      "question": "apnea",
+      "answer": ["無呼吸"]
+    },
+    {
+      "question": "arteriosclerosis",
+      "answer": ["動脈硬化"]
     },
     {
       "question": "asthma",
       "answer": ["喘息"]
     },
     {
+      "question": "brachiocephalic artery",
+      "answer": ["腕頭動脈"]
+    },
+    {
       "question": "bronchiectasis",
       "answer": ["気管支拡張症"]
+    },
+    {
+      "question": "bronchiole",
+      "answer": ["細気管支"]
+    },
+    {
+      "question": "bronchitis",
+      "answer": ["気管支炎"]
+    },
+    {
+      "question": "bronchus",
+      "answer": ["気管支"]
+    },
+    {
+      "question": "calcification",
+      "answer": ["石灰化"]
+    },
+    {
+      "question": "caudal",
+      "answer": ["尾側の"]
     },
     {
       "question": "complement",
@@ -27,20 +87,60 @@
       "answer": ["造影CT"]
     },
     {
+      "question": "cranial",
+      "answer": ["頭側の"]
+    },
+    {
+      "question": "defibrillation",
+      "answer": ["除細動"]
+    },
+    {
       "question": "diarrhea",
       "answer": ["下痢"]
+    },
+    {
+      "question": "disorientation",
+      "answer": ["見当識障害"]
+    },
+    {
+      "question": "distal",
+      "answer": ["遠位側の"]
     },
     {
       "question": "distend",
       "answer": ["膨れる"]
     },
     {
+      "question": "dizziness",
+      "answer": ["めまい（一般的に使われる言葉）"]
+    },
+    {
+      "question": "dorsal",
+      "answer": ["背側の"]
+    },
+    {
       "question": "during exertion",
       "answer": ["労作時"]
     },
     {
+      "question": "dysmenorrhea",
+      "answer": ["月経困難"]
+    },
+    {
+      "question": "dysphagia",
+      "answer": ["嚥下困難"]
+    },
+    {
       "question": "dyspnea",
       "answer": ["呼吸困難"]
+    },
+    {
+      "question": "eczema",
+      "answer": ["湿疹"]
+    },
+    {
+      "question": "emaciation",
+      "answer": ["やせ"]
     },
     {
       "question": "embolism",
@@ -55,6 +155,10 @@
       "answer": ["腸チフス"]
     },
     {
+      "question": "epigastralgia",
+      "answer": ["心窩部痛"]
+    },
+    {
       "question": "eschar",
       "answer": ["（ツツガムシなどの）刺し口"]
     },
@@ -67,12 +171,28 @@
       "answer": ["血管外漏出"]
     },
     {
+      "question": "faintness",
+      "answer": ["非回転性めまい"]
+    },
+    {
+      "question": "femoral artery",
+      "answer": ["大腿動脈"]
+    },
+    {
       "question": "gastrointerstinal tractography",
       "answer": ["消化管造影"]
     },
     {
       "question": "hemorrhage",
       "answer": ["出血"]
+    },
+    {
+      "question": "incontinence",
+      "answer": ["失禁"]
+    },
+    {
+      "question": "indigestion",
+      "answer": ["消化不良"]
     },
     {
       "question": "infarction",
@@ -83,8 +203,40 @@
       "answer": ["炎症"]
     },
     {
+      "question": "inspiratory reserve volume",
+      "answer": ["予備呼吸量"]
+    },
+    {
       "question": "intercostal space",
       "answer": ["肋間"]
+    },
+    {
+      "question": "lateral position",
+      "answer": ["側臥位"]
+    },
+    {
+      "question": "lithotomy position",
+      "answer": ["砕石位"]
+    },
+    {
+      "question": "lumbago",
+      "answer": ["腰痛"]
+    },
+    {
+      "question": "malaise",
+      "answer": ["倦怠感"]
+    },
+    {
+      "question": "melena",
+      "answer": ["黒色便"]
+    },
+    {
+      "question": "menopause",
+      "answer": ["閉経・更年期"]
+    },
+    {
+      "question": "menorrhagia",
+      "answer": ["過多月経"]
     },
     {
       "question": "menorrhea",
@@ -99,8 +251,36 @@
       "answer": ["院内の"]
     },
     {
+      "question": "obstruction",
+      "answer": ["閉塞"]
+    },
+    {
+      "question": "palpation",
+      "answer": ["触診"]
+    },
+    {
+      "question": "palpitation",
+      "answer": ["動悸"]
+    },
+    {
+      "question": "paralysis",
+      "answer": ["麻痺"]
+    },
+    {
+      "question": "perforation",
+      "answer": ["穿孔"]
+    },
+    {
       "question": "pericarditis",
       "answer": ["心膜炎"]
+    },
+    {
+      "question": "peripheral",
+      "answer": ["末梢側の"]
+    },
+    {
+      "question": "phlegm",
+      "answer": ["痰（日常的に使われる言葉）"]
     },
     {
       "question": "pleura",
@@ -115,16 +295,56 @@
       "answer": ["気胸"]
     },
     {
+      "question": "prone position",
+      "answer": ["腹臥位"]
+    },
+    {
+      "question": "proximal",
+      "answer": ["近位側の"]
+    },
+    {
+      "question": "pulsation",
+      "answer": ["拍動"]
+    },
+    {
       "question": "rabies",
       "answer": ["狂犬病"]
+    },
+    {
+      "question": "rupture",
+      "answer": ["破裂"]
+    },
+    {
+      "question": "residual lung volume",
+      "answer": ["残気量"]
+    },
+    {
+      "question": "scar",
+      "answer": ["瘢痕"]
     },
     {
       "question": "scrub typhus",
       "answer": ["ツツガムシ病"]
     },
     {
+      "question": "spine position",
+      "answer": ["背臥位"]
+    },
+    {
+      "question": "sputum",
+      "answer": ["痰"]
+    },
+    {
       "question": "sternum",
       "answer": ["胸骨"]
+    },
+    {
+      "question": "superficial temporal artery",
+      "answer": ["浅側頭動脈"]
+    },
+    {
+      "question": "syncope",
+      "answer": ["失神"]
     },
     {
       "question": "tender",
@@ -147,8 +367,44 @@
       "answer": ["ダニ媒介感染症"]
     },
     {
+      "question": "tidal volume",
+      "answer": ["一回換気量"]
+    },
+    {
+      "question": "tonsillitis",
+      "answer": ["扁桃炎"]
+    },
+    {
+      "question": "trachea",
+      "answer": ["気管"]
+    },
+    {
+      "question": "ulcer",
+      "answer": ["潰瘍"]
+    },
+    {
+      "question": "ulnar artery",
+      "answer": ["尺骨動脈"]
+    },
+    {
       "question": "ureter",
       "answer": ["尿管"]
+    },
+    {
+      "question": "varices",
+      "answer": ["静脈瘤"]
+    },
+    {
+      "question": "ventral",
+      "answer": ["腹側の"]
+    },
+    {
+      "question": "vertigo",
+      "answer": ["回転性めまい"]
+    },
+    {
+      "question": "vomit",
+      "answer": ["吐く"]
     },
     {
       "question": "zoster",
@@ -157,6 +413,10 @@
     {
       "question": "-itis",
       "answer": ["炎症"]
+    },
+    {
+      "question": "-rrhea",
+      "answer": ["液体が流れ出すことの意"]
     }
   ]
 }
