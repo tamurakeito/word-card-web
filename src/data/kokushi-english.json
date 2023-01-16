@@ -3,8 +3,12 @@
   "title": "【国試対策】医学英語ドリル",
   "data": [
     {
-      "question": "ascites",
-      "answer": ["腹水"]
+      "question": "akinesia",
+      "answer": ["無動（Parkinson病にみられる）"]
+    },
+    {
+      "question": "alopecia",
+      "answer": ["脱毛症"]
     },
     {
       "question": "amenorrhea",
@@ -13,6 +17,14 @@
     {
       "question": "amnesia",
       "answer": ["健忘症"]
+    },
+    {
+      "question": "amputation",
+      "answer": ["切断（整形外科領域でよく使われる）"]
+    },
+    {
+      "question": "anesthesia",
+      "answer": ["麻酔"]
     },
     {
       "question": "aneurysm",
@@ -32,7 +44,7 @@
     },
     {
       "question": "anuria",
-      "answer": ["貧血"]
+      "answer": ["無尿"]
     },
     {
       "question": "apnea",
@@ -43,8 +55,20 @@
       "answer": ["動脈硬化"]
     },
     {
+      "question": "arthropathy",
+      "answer": ["関節症"]
+    },
+    {
+      "question": "ascites",
+      "answer": ["腹水"]
+    },
+    {
       "question": "asthma",
       "answer": ["喘息"]
+    },
+    {
+      "question": "biopsy",
+      "answer": ["生検"]
     },
     {
       "question": "brachiocephalic artery",
@@ -75,6 +99,18 @@
       "answer": ["尾側の"]
     },
     {
+      "question": "cerebral arteriovenous malformation",
+      "answer": ["脳動静脈奇形"]
+    },
+    {
+      "question": "chills",
+      "answer": ["悪寒"]
+    },
+    {
+      "question": "chorea",
+      "answer": ["舞踏運動"]
+    },
+    {
       "question": "complement",
       "answer": ["補体"]
     },
@@ -91,16 +127,40 @@
       "answer": ["頭側の"]
     },
     {
+      "question": "decubitus",
+      "answer": ["褥瘡"]
+    },
+    {
       "question": "defibrillation",
-      "answer": ["除細動"]
+      "answer": ["（致死性不整脈VF・pulseless-VTに対する）除細動"]
+    },
+    {
+      "question": "delirium",
+      "answer": ["せん妄"]
+    },
+    {
+      "question": "dialysis",
+      "answer": ["透析"]
     },
     {
       "question": "diarrhea",
       "answer": ["下痢"]
     },
     {
+      "question": "discharge",
+      "answer": ["分泌物"]
+    },
+    {
       "question": "disorientation",
       "answer": ["見当識障害"]
+    },
+    {
+      "question": "dissection",
+      "answer": ["解離（動脈解離）"]
+    },
+    {
+      "question": "dissociation",
+      "answer": ["（精神科領域の）解離"]
     },
     {
       "question": "distal",
@@ -109,6 +169,10 @@
     {
       "question": "distend",
       "answer": ["膨れる"]
+    },
+    {
+      "question": "distress",
+      "answer": ["苦痛"]
     },
     {
       "question": "dizziness",
@@ -135,6 +199,10 @@
       "answer": ["呼吸困難"]
     },
     {
+      "question": "dysthymia",
+      "answer": ["気分変調"]
+    },
+    {
       "question": "eczema",
       "answer": ["湿疹"]
     },
@@ -147,8 +215,16 @@
       "answer": ["塞栓症"]
     },
     {
+      "question": "encephalopathy",
+      "answer": ["脳症"]
+    },
+    {
       "question": "endemic",
       "answer": ["風土病"]
+    },
+    {
+      "question": "endocarditis",
+      "answer": ["心内膜炎"]
     },
     {
       "question": "enteric fever",
@@ -167,6 +243,14 @@
       "answer": ["評価"]
     },
     {
+      "question": "exccessive",
+      "answer": ["過剰"]
+    },
+    {
+      "question": "extremities",
+      "answer": ["四肢"]
+    },
+    {
       "question": "extravasation",
       "answer": ["血管外漏出"]
     },
@@ -175,16 +259,64 @@
       "answer": ["非回転性めまい"]
     },
     {
+      "question": "fatigue",
+      "answer": ["倦怠感"]
+    },
+    {
       "question": "femoral artery",
       "answer": ["大腿動脈"]
+    },
+    {
+      "question": "festinationg gait",
+      "answer": ["加速歩行（Parkinson病にみられる）"]
+    },
+    {
+      "question": "fundoscopic examination",
+      "answer": ["眼底検査"]
     },
     {
       "question": "gastrointerstinal tractography",
       "answer": ["消化管造影"]
     },
     {
+      "question": "genital",
+      "answer": ["生殖器"]
+    },
+    {
+      "question": "getting out of breath",
+      "answer": ["息切れする"]
+    },
+    {
+      "question": "gonococc",
+      "answer": ["淋菌"]
+    },
+    {
+      "question": "gonorrhea",
+      "answer": ["淋病"]
+    },
+    {
+      "question": "graft",
+      "answer": ["移植"]
+    },
+    {
+      "question": "granulation",
+      "answer": ["肉芽形成"]
+    },
+    {
+      "question": "groin",
+      "answer": ["股間"]
+    },
+    {
       "question": "hemorrhage",
       "answer": ["出血"]
+    },
+    {
+      "question": "incision",
+      "answer": ["切開"]
+    },
+    {
+      "question": "inconsist",
+      "answer": ["一貫性のない"]
     },
     {
       "question": "incontinence",
@@ -195,12 +327,24 @@
       "answer": ["消化不良"]
     },
     {
+      "question": "indurate",
+      "answer": ["硬化する"]
+    },
+    {
       "question": "infarction",
       "answer": ["梗塞"]
     },
     {
       "question": "inflammation",
       "answer": ["炎症"]
+    },
+    {
+      "question": "inguinal",
+      "answer": ["鼠径部"]
+    },
+    {
+      "question": "inhalers",
+      "answer": ["吸入器"]
     },
     {
       "question": "inspiratory reserve volume",
@@ -211,8 +355,28 @@
       "answer": ["肋間"]
     },
     {
+      "question": "intercourse",
+      "answer": ["性交"]
+    },
+    {
+      "question": "intubation",
+      "answer": ["挿管"]
+    },
+    {
       "question": "lateral position",
       "answer": ["側臥位"]
+    },
+    {
+      "question": "lesion",
+      "answer": ["病変"]
+    },
+    {
+      "question": "lethargic",
+      "answer": ["無気力"]
+    },
+    {
+      "question": "ligation",
+      "answer": ["結紮"]
     },
     {
       "question": "lithotomy position",
@@ -223,8 +387,16 @@
       "answer": ["腰痛"]
     },
     {
+      "question": "lymphadenopathy",
+      "answer": ["リンパ節腫脹"]
+    },
+    {
       "question": "malaise",
       "answer": ["倦怠感"]
+    },
+    {
+      "question": "malformation",
+      "answer": ["奇形"]
     },
     {
       "question": "melena",
@@ -247,12 +419,32 @@
       "answer": ["中皮腫"]
     },
     {
+      "question": "mobile",
+      "answer": ["可動"]
+    },
+    {
+      "question": "nerve conduction study",
+      "answer": ["神経伝導検査"]
+    },
+    {
       "question": "nosocomical",
       "answer": ["院内の"]
     },
     {
+      "question": "observation",
+      "answer": ["観察"]
+    },
+    {
       "question": "obstruction",
       "answer": ["閉塞"]
+    },
+    {
+      "question": "palm",
+      "answer": ["手掌"]
+    },
+    {
+      "question": "palpable",
+      "answer": ["明白な", "触知可能な"]
     },
     {
       "question": "palpation",
@@ -267,16 +459,24 @@
       "answer": ["麻痺"]
     },
     {
+      "question": "percutaneous",
+      "answer": ["経皮投与"]
+    },
+    {
       "question": "perforation",
       "answer": ["穿孔"]
     },
     {
       "question": "pericarditis",
-      "answer": ["心膜炎"]
+      "answer": ["心外膜炎"]
     },
     {
       "question": "peripheral",
       "answer": ["末梢側の"]
+    },
+    {
+      "question": "pharyngalgia",
+      "answer": ["咽頭痛"]
     },
     {
       "question": "phlegm",
@@ -295,6 +495,14 @@
       "answer": ["気胸"]
     },
     {
+      "question": "precede",
+      "answer": ["先行する"]
+    },
+    {
+      "question": "prior",
+      "answer": ["事前"]
+    },
+    {
       "question": "prone position",
       "answer": ["腹臥位"]
     },
@@ -307,16 +515,40 @@
       "answer": ["拍動"]
     },
     {
+      "question": "pulsion",
+      "answer": ["突進現象（Parkinson病にみられる）"]
+    },
+    {
       "question": "rabies",
       "answer": ["狂犬病"]
     },
     {
-      "question": "rupture",
-      "answer": ["破裂"]
+      "question": "rash",
+      "answer": ["発疹"]
+    },
+    {
+      "question": "remainder",
+      "answer": ["残り"]
+    },
+    {
+      "question": "resection",
+      "answer": ["切除"]
     },
     {
       "question": "residual lung volume",
       "answer": ["残気量"]
+    },
+    {
+      "question": "resting tremor",
+      "answer": ["静止時振戦"]
+    },
+    {
+      "question": "rhinorrhea",
+      "answer": ["鼻漏"]
+    },
+    {
+      "question": "rupture",
+      "answer": ["破裂"]
     },
     {
       "question": "scar",
@@ -325,6 +557,18 @@
     {
       "question": "scrub typhus",
       "answer": ["ツツガムシ病"]
+    },
+    {
+      "question": "shingles",
+      "answer": ["帯状疱疹"]
+    },
+    {
+      "question": "sore",
+      "answer": ["痛み"]
+    },
+    {
+      "question": "spinal canal malformation",
+      "answer": ["脊柱管狭窄症"]
     },
     {
       "question": "spine position",
@@ -339,8 +583,16 @@
       "answer": ["胸骨"]
     },
     {
+      "question": "sublingual",
+      "answer": ["舌下"]
+    },
+    {
       "question": "superficial temporal artery",
       "answer": ["浅側頭動脈"]
+    },
+    {
+      "question": "suppository",
+      "answer": ["座薬"]
     },
     {
       "question": "syncope",
@@ -351,8 +603,16 @@
       "answer": ["圧痛のある"]
     },
     {
+      "question": "tenesmus",
+      "answer": ["しぶり腹"]
+    },
+    {
       "question": "tetanus",
       "answer": ["破傷風"]
+    },
+    {
+      "question": "tetany",
+      "answer": ["強直"]
     },
     {
       "question": "threatened miscarriage",
@@ -369,6 +629,14 @@
     {
       "question": "tidal volume",
       "answer": ["一回換気量"]
+    },
+    {
+      "question": "tingling",
+      "answer": ["打診や冷却するときに得られる蟻走性微痛感（むずむずした感じ）"]
+    },
+    {
+      "question": "tinnitus",
+      "answer": ["耳鳴"]
     },
     {
       "question": "tonsillitis",
