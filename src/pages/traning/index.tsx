@@ -1,13 +1,15 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Question, ThemaContent } from "types/types";
+import { Question } from "types/types";
 import { Text } from "atom/text";
 import { Button } from "atom/button";
 import "./index.scss";
 import { useThemaContext } from "component/thema-provider";
+import { useTrainingContext } from "component/training-provider";
 
 export const Training = () => {
   const { thema } = useThemaContext();
+  const { questionLength } = useTrainingContext();
   const RandomSampling = (data: Array<Question>): Array<Question> => {
     // const [arr, setArr] = useState<Array<Question>>(data);
     const arr: Array<Question> = [];
@@ -16,7 +18,7 @@ export const Training = () => {
       return undefined;
     });
     const length = arr.length;
-    const resultLength = length < 10 ? length : 10;
+    const resultLength = length < questionLength ? length : questionLength;
 
     for (let i = 0; i < resultLength; i++) {
       const randomIdx = Math.floor(Math.random() * length);

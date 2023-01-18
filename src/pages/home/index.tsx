@@ -11,9 +11,11 @@ import KokushiYokomoji from "data/kokushi-yokomoji.json";
 import KokushiEnglish from "data/kokushi-english.json";
 import KokushiSign from "data/kokushi-sign.json";
 import KokushiDrug from "data/kokushi-drug.json";
+import { useTrainingContext } from "component/training-provider";
 
 export const Home = () => {
   const { thema, setThemaContent } = useThemaContext();
+  const { setQuestionLength } = useTrainingContext();
   const ListNode = ({ question }: { question: Question }) => {
     const [isOpen, setIsOpen] = useState(false);
     const handleClick = () => {
@@ -73,7 +75,12 @@ export const Home = () => {
   };
   return (
     <div className="home">
-      <div onClick={changeThema}>
+      <div
+        onDoubleClick={() => {
+          setQuestionLength(30);
+          navigation("/word-card-web/training");
+        }}
+      >
         <Spacer height={50} />
         <Text type="title">{thema.title}</Text>
         {/* <Text type="subtitle">
@@ -89,6 +96,7 @@ export const Home = () => {
         <Button
           value="ミニテスト"
           onClick={() => {
+            setQuestionLength(10);
             navigation("/word-card-web/training");
           }}
           classes={["home-button"]}
