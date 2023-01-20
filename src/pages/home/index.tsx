@@ -94,20 +94,18 @@ export const Home = () => {
       <Spacer height={120} />
       <div className="home-bottom-fixed">
         <Button
-          value="ミニテスト"
           onClick={() => {
             setQuestionLength(10);
             navigation("/word-card-web/training");
           }}
           classes={["home-button"]}
           // bottomFix={true}
-        />
-        <Button
-          value="切り替える"
-          onClick={changeThema}
-          classes={["home-button"]}
-          color={"grey"}
-        />
+        >
+          ミニテスト
+        </Button>
+        <Button onClick={changeThema} classes={["home-button"]} color={"grey"}>
+          切り替える
+        </Button>
       </div>
     </div>
   );

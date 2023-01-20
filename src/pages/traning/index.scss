@@ -18,6 +18,29 @@
         display: hidden;
       }
     }
+    span {
+      width: 100%;
+    }
+    .button-right-wrong {
+      width: 100%;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      margin: {
+        top: 20px;
+      }
+      * {
+        width: 75px;
+        height: 75px;
+        padding: {
+          right: 15px;
+          left: 15px;
+        }
+        &.wrong {
+          transform: scale(1.25);
+        }
+      }
+    }
   }
   .cover {
     z-index: 2;

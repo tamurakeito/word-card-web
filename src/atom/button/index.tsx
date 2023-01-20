@@ -1,15 +1,16 @@
 import "./index.scss";
 import classNames from "classnames";
+import { ReactNode } from "react";
 
 export const Button = ({
-  value,
+  children,
   onClick,
   onDoubleClick = () => {},
   classes,
   bottomFix = false,
   color = "black",
 }: {
-  value: string;
+  children: ReactNode;
   onClick: () => void;
   onDoubleClick?: () => void;
   classes?: Array<string>;
@@ -25,7 +26,7 @@ export const Button = ({
     : classNames(["button", `button__${color}`]);
   return (
     <div className={clazz} onClick={onClick} onDoubleClick={onDoubleClick}>
-      {value}
+      {children}
     </div>
   );
 };
