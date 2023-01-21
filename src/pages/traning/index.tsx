@@ -13,18 +13,21 @@ export const Training = () => {
   const { questionLength } = useTrainingContext();
   const [questionArray, setQuestionArray] = useState<Array<Question>>([]);
   const [originalArr, setOriginalArr] = useState<Array<Question>>([]);
-  const RandomSampling = () => {
-    const length = originalArr.length;
+
+  // 配列からランダムに抽出する
+  const RandomSampling = (arr: Array<Question>) => {
+    const length = arr.length;
     const resultLength = length < questionLength ? length : questionLength;
 
     for (let i = 0; i < resultLength; i++) {
       const randomIdx = Math.floor(Math.random() * length);
-      let tmpStorage = originalArr[i];
-      originalArr[i] = originalArr[randomIdx];
-      originalArr[randomIdx] = tmpStorage;
+      let tmpStorage = arr[i];
+      arr[i] = arr[randomIdx];
+      arr[randomIdx] = tmpStorage;
     }
-    setQuestionArray(originalArr.slice(0, resultLength));
+    setQuestionArray(arr.slice(0, resultLength));
   };
+
   useEffect(() => {
     const arr: Array<Question> = [];
     thema.data.map((item, index) => {
@@ -33,6 +36,14 @@ export const Training = () => {
     });
     setOriginalArr(arr);
   }, []);
+
+  // 配列から要素を抜く
+  // 正解した場合に問題配列から削除する処理に用いる
+  const DeleteQuestion = async (arr: Array<Question>, question: string) => {
+    const Arr = arr.filter((data) => data.question !== question && data);
+    RandomSampling(Arr);
+    setOriginalArr(Arr);
+  };
 
   const Card = ({ question }: { question: Question }) => {
     const [isAnswer, setIsAnswer] = useState(false);
@@ -68,13 +79,7 @@ export const Training = () => {
                 className="right"
                 color="#aaccff"
                 onClick={() => {
-                  setOriginalArr(
-                    originalArr.filter(
-                      (data) => data.question !== question.question && data
-                    )
-                  );
-                  // setIsHidden(true);
-                  RandomSampling();
+                  DeleteQuestion(originalArr, question.question);
                 }}
               />
               <X
@@ -102,7 +107,7 @@ export const Training = () => {
           <div
             className="cover"
             onClick={() => {
-              RandomSampling();
+              RandomSampling(originalArr);
               setIsStarted(true);
             }}
           >
@@ -115,7 +120,7 @@ export const Training = () => {
           <div
             className="retry"
             onClick={() => {
-              RandomSampling();
+              RandomSampling(originalArr);
             }}
           >
             <div>
