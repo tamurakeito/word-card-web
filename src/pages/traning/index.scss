@@ -30,8 +30,8 @@
         top: 20px;
       }
       * {
-        width: 75px;
-        height: 75px;
+        width: 125px;
+        height: 125px;
         padding: {
           right: 15px;
           left: 15px;
@@ -44,5 +44,12 @@
   }
   .cover {
     z-index: 2;
+  }
+  .remaining-questions {
+    position: fixed;
+    z-index: 3;
+    width: calc(100% - 16px);
+    text-align: center;
+    bottom: 10px;
   }
 }

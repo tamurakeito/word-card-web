@@ -5,19 +5,20 @@ import { Text } from "atom/text";
 import { Button } from "atom/button";
 import "./index.scss";
 import { useThemaContext } from "component/thema-provider";
-import { useTrainingContext } from "component/training-provider";
+// import { useTrainingContext } from "component/training-provider";
 import { Circle, X } from "react-feather";
 
 export const Training = () => {
   const { thema } = useThemaContext();
-  const { questionLength } = useTrainingContext();
+  // const { questionLength } = useTrainingContext();
   const [questionArray, setQuestionArray] = useState<Array<Question>>([]);
   const [originalArr, setOriginalArr] = useState<Array<Question>>([]);
 
   // 配列からランダムに抽出する
   const RandomSampling = (arr: Array<Question>) => {
     const length = arr.length;
-    const resultLength = length < questionLength ? length : questionLength;
+    // const resultLength = length < questionLength ? length : questionLength;
+    const resultLength = length;
 
     for (let i = 0; i < resultLength; i++) {
       const randomIdx = Math.floor(Math.random() * length);
@@ -112,21 +113,13 @@ export const Training = () => {
             }}
           >
             <div>
-              <Text type="title">ミニテスト 10問</Text>
+              <Text type="title">ミニテスト {originalArr.length}問</Text>
               <Text type="subtitle">tap!</Text>
             </div>
           </div>
         ) : originalArr.length > 0 ? (
-          <div
-            className="retry"
-            onClick={() => {
-              RandomSampling(originalArr);
-            }}
-          >
-            <div>
-              <Text type="title">再トライ</Text>
-              <Text type="subtitle">tap!</Text>
-            </div>
+          <div className="remaining-questions">
+            <Text type="head">のこり{questionArray.length}問</Text>
           </div>
         ) : (
           <div
@@ -145,14 +138,14 @@ export const Training = () => {
           <Card key={index} question={item} />
         ))}
       </div>
-      <Button
+      {/* <Button
         onClick={() => {
           navigation("/word-card-web");
         }}
         bottomFix={true}
       >
         もどる
-      </Button>
+      </Button> */}
     </div>
   );
 };

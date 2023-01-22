@@ -11,6 +11,7 @@ import KokushiYokomoji from "data/kokushi-yokomoji.json";
 import KokushiEnglish from "data/kokushi-english.json";
 import KokushiSign from "data/kokushi-sign.json";
 import KokushiDrug from "data/kokushi-drug.json";
+import KokushiDermadrome from "data/kokushi-dermadrome.json";
 import { useTrainingContext } from "component/training-provider";
 
 export const Home = () => {
@@ -66,6 +67,10 @@ export const Home = () => {
         document.title = KokushiDrug.title;
         return;
       case 4:
+        setThemaContent(KokushiDermadrome);
+        document.title = KokushiDermadrome.title;
+        return;
+      case 5:
         setThemaContent(KokushiYokomoji);
         document.title = KokushiYokomoji.title;
         return;
