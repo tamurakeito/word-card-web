@@ -1,24 +1,24 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { Question } from "types/types";
 import { Text } from "atom/text";
 // import { Button } from "atom/button";
 import "./index.scss";
 import { useThemaContext } from "component/thema-provider";
-// import { useTrainingContext } from "component/training-provider";
+import { useTrainingContext } from "component/training-provider";
 import { Circle, X } from "react-feather";
+import { useSurfaceContext } from "component/surface-provider";
 
 export const Training = () => {
   const { thema } = useThemaContext();
-  // const { questionLength } = useTrainingContext();
+  const { questionLength } = useTrainingContext();
+  const { setSurface } = useSurfaceContext();
   const [questionArray, setQuestionArray] = useState<Array<Question>>([]);
   const [originalArr, setOriginalArr] = useState<Array<Question>>([]);
 
   // 配列からランダムに抽出する
   const RandomSampling = (arr: Array<Question>) => {
     const length = arr.length;
-    // const resultLength = length < questionLength ? length : questionLength;
-    const resultLength = length;
+    const resultLength = length < questionLength ? length : questionLength;
 
     for (let i = 0; i < resultLength; i++) {
       const randomIdx = Math.floor(Math.random() * length);
@@ -46,9 +46,19 @@ export const Training = () => {
     setOriginalArr(Arr);
   };
 
-  const Card = ({ question }: { question: Question }) => {
+  const Card = ({
+    question,
+    isLast,
+  }: {
+    question: Question;
+    isLast: boolean;
+  }) => {
     const [isAnswer, setIsAnswer] = useState(false);
     const [isHidden, setIsHidden] = useState(false);
+    const handleClick = (arr: Array<Question>) => {
+      setIsHidden(true);
+      isLast && RandomSampling(arr);
+    };
     return isHidden ? (
       <></>
     ) : !isAnswer ? (
@@ -66,14 +76,16 @@ export const Training = () => {
       <div
         className="comment"
         onClick={() => {
-          setIsHidden(true);
+          handleClick(originalArr);
         }}
       >
         <div className="card">
           <span>
             <Text type="title">{question.question}</Text>
-            {question.answer.map((item) => (
-              <Text type="comment">{item}</Text>
+            {question.answer.map((item, index) => (
+              <Text key={index} type="comment">
+                {item}
+              </Text>
             ))}
             <div className="button-right-wrong">
               <Circle
@@ -87,7 +99,7 @@ export const Training = () => {
                 className="wrong"
                 color="#ffaaaa"
                 onClick={() => {
-                  setIsHidden(true);
+                  handleClick(originalArr);
                 }}
               />
             </div>
@@ -96,8 +108,6 @@ export const Training = () => {
       </div>
     );
   };
-
-  const navigation = useNavigate();
 
   const [isStarted, setIsStarted] = useState(false);
 
@@ -119,13 +129,13 @@ export const Training = () => {
           </div>
         ) : originalArr.length > 0 ? (
           <div className="remaining-questions">
-            <Text type="head">のこり{questionArray.length}問</Text>
+            <Text type="head">のこり{originalArr.length}問</Text>
           </div>
         ) : (
           <div
             className="retry"
             onClick={() => {
-              navigation("/word-card-web");
+              setSurface("home");
             }}
           >
             <div>
@@ -135,12 +145,12 @@ export const Training = () => {
           </div>
         )}
         {questionArray.map((item, index) => (
-          <Card key={index} question={item} />
+          <Card key={index} question={item} isLast={index > 0 ? false : true} />
         ))}
       </div>
       {/* <Button
         onClick={() => {
-          navigation("/word-card-web");
+          setSurface("home");
         }}
         bottomFix={true}
       >

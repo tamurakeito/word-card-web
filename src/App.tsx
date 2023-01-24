@@ -3,6 +3,10 @@ import { Home } from "pages/home";
 import { Training } from "pages/traning";
 import { ThemaContextProvider } from "component/thema-provider";
 import { TraningContextProvider } from "component/training-provider";
+import {
+  SurfaceContextProvider,
+  useSurfaceContext,
+} from "component/surface-provider";
 
 const App = () => {
   return (
@@ -10,7 +14,9 @@ const App = () => {
       <Router>
         <ThemaContextProvider>
           <TraningContextProvider>
-            <RouterSelector />
+            <SurfaceContextProvider>
+              <RouterSelector />
+            </SurfaceContextProvider>
           </TraningContextProvider>
         </ThemaContextProvider>
       </Router>
@@ -25,8 +31,17 @@ export default App;
 const RouterSelector = () => {
   return (
     <Routes>
-      <Route path="/word-card-web" element={<Home />} />
-      <Route path="/word-card-web/training" element={<Training />} />
+      <Route path="/word-card-web" element={<SurfaceProvider />} />
     </Routes>
+  );
+};
+
+const SurfaceProvider = () => {
+  const { surface } = useSurfaceContext();
+  return (
+    <>
+      {surface === "home" && <Home />}
+      {surface === "training" && <Training />}
+    </>
   );
 };

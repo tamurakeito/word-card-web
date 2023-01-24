@@ -8,3 +8,5 @@ export type ThemaContent = {
   title: string;
   data: Array<Question>;
 };
+
+export type Surface = "home" | "training";

@@ -9,7 +9,9 @@
       padding: {
         left: 30px;
       }
-      cursor: pointer;
+      * {
+        cursor: pointer;
+      }
       .toggle {
         position: absolute;
         left: 10px;

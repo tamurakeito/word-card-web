@@ -13,10 +13,12 @@ import KokushiSign from "data/kokushi-sign.json";
 import KokushiDrug from "data/kokushi-drug.json";
 import KokushiDermadrome from "data/kokushi-dermadrome.json";
 import { useTrainingContext } from "component/training-provider";
+import { useSurfaceContext } from "component/surface-provider";
 
 export const Home = () => {
   const { thema, setThemaContent } = useThemaContext();
   const { setQuestionLength } = useTrainingContext();
+  const { setSurface } = useSurfaceContext();
   const ListNode = ({ question }: { question: Question }) => {
     const [isOpen, setIsOpen] = useState(false);
     const handleClick = () => {
@@ -83,7 +85,7 @@ export const Home = () => {
       <div
         onDoubleClick={() => {
           setQuestionLength(30);
-          navigation("/word-card-web/training");
+          setSurface("training");
         }}
       >
         <Spacer height={50} />
@@ -101,7 +103,7 @@ export const Home = () => {
         <Button
           onClick={() => {
             setQuestionLength(10);
-            navigation("/word-card-web/training");
+            setSurface("training");
           }}
           classes={["home-button"]}
           // bottomFix={true}
