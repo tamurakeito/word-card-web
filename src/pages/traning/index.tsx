@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Question } from "types/types";
 import { Text } from "atom/text";
-// import { Button } from "atom/button";
+import { Button } from "atom/button";
 import "./index.scss";
 import { useThemaContext } from "component/thema-provider";
 import { useTrainingContext } from "component/training-provider";
@@ -128,9 +128,26 @@ export const Training = () => {
             </div>
           </div>
         ) : originalArr.length > 0 ? (
-          <div className="remaining-questions">
-            <Text type="head">のこり{originalArr.length}問</Text>
-          </div>
+          <>
+            <div className="remaining-questions">
+              <Text type="head">のこり{originalArr.length}問</Text>
+              <Button
+                onClick={() => {
+                  setSurface("home");
+                }}
+                // bottomFix={true}
+              >
+                もどる
+              </Button>
+            </div>
+            {questionArray.map((item, index) => (
+              <Card
+                key={index}
+                question={item}
+                isLast={index > 0 ? false : true}
+              />
+            ))}
+          </>
         ) : (
           <div
             className="retry"
@@ -144,18 +161,7 @@ export const Training = () => {
             </div>
           </div>
         )}
-        {questionArray.map((item, index) => (
-          <Card key={index} question={item} isLast={index > 0 ? false : true} />
-        ))}
       </div>
-      {/* <Button
-        onClick={() => {
-          setSurface("home");
-        }}
-        bottomFix={true}
-      >
-        もどる
-      </Button> */}
     </div>
   );
 };

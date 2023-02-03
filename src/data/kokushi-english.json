@@ -39,6 +39,10 @@
       "answer": ["血管造影"]
     },
     {
+      "question": "annual",
+      "answer": ["年間・通年"]
+    },
+    {
       "question": "anorexia",
       "answer": ["食欲不振"]
     },
@@ -91,8 +95,16 @@
       "answer": ["気管支"]
     },
     {
+      "question": "bruit",
+      "answer": ["雑音"]
+    },
+    {
       "question": "calcification",
       "answer": ["石灰化"]
+    },
+    {
+      "question": "carotid",
+      "answer": ["頸動脈"]
     },
     {
       "question": "caudal",
@@ -307,8 +319,16 @@
       "answer": ["股間"]
     },
     {
+      "question": "hemiplegia",
+      "answer": ["片麻痺"]
+    },
+    {
       "question": "hemorrhage",
       "answer": ["出血"]
+    },
+    {
+      "question": "impaired consciousness",
+      "answer": ["意識障害"]
     },
     {
       "question": "incision",
@@ -439,6 +459,10 @@
       "answer": ["閉塞"]
     },
     {
+      "question": "occupation",
+      "answer": ["職業"]
+    },
+    {
       "question": "palm",
       "answer": ["手掌"]
     },
@@ -545,6 +569,10 @@
     {
       "question": "rhinorrhea",
       "answer": ["鼻漏"]
+    },
+    {
+      "question": "seizure",
+      "answer": ["てんかん発作"]
     },
     {
       "question": "rupture",
