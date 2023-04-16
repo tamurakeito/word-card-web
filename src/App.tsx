@@ -11,7 +11,7 @@ import {
 const App = () => {
   return (
     <div className="App">
-      <Router>
+      <Router basename="/word-card-web">
         <ThemaContextProvider>
           <TraningContextProvider>
             <SurfaceContextProvider>
@@ -31,7 +31,7 @@ export default App;
 const RouterSelector = () => {
   return (
     <Routes>
-      <Route path="/word-card-web" element={<SurfaceProvider />} />
+      <Route path="" element={<SurfaceProvider />} />
     </Routes>
   );
 };

@@ -1,0 +1,121 @@
+{
+  "index": 1,
+  "title": "【レジデント学習用】術中麻酔薬ドリル",
+  "data": [
+    {
+      "question": "フェンタニル",
+      "answer": ["オピオイド鎮痛薬", "100 μg / 2 ml"]
+    },
+    {
+      "question": "プロポフォール",
+      "answer": ["静脈麻酔薬", "200 mg / 20 ml"]
+    },
+    {
+      "question": "ロクロニウム",
+      "answer": ["（非脱分極性）筋弛緩薬", "50 mg / 5 ml"]
+    },
+    {
+      "question": "ケタラール",
+      "answer": [
+        "ケタミン（解離性麻酔薬）",
+        "50 mg / 5 ml（静注用）",
+        "500 mg / 10 ml（筋注用）"
+      ]
+    },
+    {
+      "question": "ネオシネジン",
+      "answer": ["フェニレフリン（α刺激薬）", "1 mg / 1 ml を 10 ml に希釈"]
+    },
+    {
+      "question": "アトロピン",
+      "answer": ["徐拍性不整脈の初期対応", "0.5 mg / 1 ml"]
+    },
+    {
+      "question": "ノルアドレナリン",
+      "answer": ["昇圧薬（α > β）", "1 mg / 1 ml"]
+    },
+    {
+      "question": "エフェドリン",
+      "answer": ["昇圧薬（α1, β1, β2）", "40 mg / 1 ml"]
+    },
+    {
+      "question": "ニカルジピン",
+      "answer": ["Ca拮抗薬（降圧）", "2 mg / 2 ml"]
+    },
+    {
+      "question": "ディプリバン",
+      "answer": ["プロポフォール（静脈麻酔薬）", "500 mg / 50 ml"]
+    },
+    {
+      "question": "レミフェンタニル",
+      "answer": ["オピオイド鎮痛薬", "5 mg"]
+    },
+    {
+      "question": "アナペイン",
+      "answer": ["ロピバカイン（術中・術後鎮痛薬）", "75 mg / 10 ml"]
+    },
+    {
+      "question": "ブリディオン",
+      "answer": ["スガマデスク（筋弛緩リバース）", "200 mg / 2ml"]
+    },
+    {
+      "question": "ドロレプタン",
+      "answer": ["ドロペリドール（神経ブロック）", "25 mg / 10 ml"]
+    },
+    {
+      "question": "アタラックスP",
+      "answer": [
+        "ヒドロキシジン（抗ヒスタミン薬・鎮静作用より麻酔前投与に用いる）",
+        "25 mg / 1 ml"
+      ]
+    },
+    {
+      "question": "",
+      "answer": [""]
+    },
+    {
+      "question": "",
+      "answer": [""]
+    },
+    {
+      "question": "",
+      "answer": [""]
+    },
+    {
+      "question": "",
+      "answer": [""]
+    },
+    {
+      "question": "",
+      "answer": [""]
+    },
+    {
+      "question": "",
+      "answer": [""]
+    },
+    {
+      "question": "",
+      "answer": [""]
+    },
+    {
+      "question": "",
+      "answer": [""]
+    },
+    {
+      "question": "",
+      "answer": [""]
+    },
+    {
+      "question": "",
+      "answer": [""]
+    },
+    {
+      "question": "",
+      "answer": [""]
+    },
+    {
+      "question": "",
+      "answer": [""]
+    }
+  ]
+}

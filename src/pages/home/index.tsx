@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { Text } from "atom/text";
 import { Spacer } from "atom/spacer";
 import { Button } from "atom/button";
@@ -7,18 +6,23 @@ import { Question } from "types/types";
 import "./index.scss";
 import { Play } from "react-feather";
 import { useThemaContext } from "component/thema-provider";
-import KokushiYokomoji from "data/kokushi-yokomoji.json";
-import KokushiEnglish from "data/kokushi-english.json";
-import KokushiSign from "data/kokushi-sign.json";
-import KokushiDrug from "data/kokushi-drug.json";
-import KokushiDermadrome from "data/kokushi-dermadrome.json";
 import { useTrainingContext } from "component/training-provider";
 import { useSurfaceContext } from "component/surface-provider";
+
+// import KokushiYokomoji from "data/kokushi-yokomoji.json";
+// import KokushiEnglish from "data/kokushi-english.json";
+// import KokushiSign from "data/kokushi-sign.json";
+// import KokushiDrug from "data/kokushi-drug.json";
+// import KokushiDermadrome from "data/kokushi-dermadrome.json";
+import ResidentAnesthetic from "data/resident-anesthetic.json";
 
 export const Home = () => {
   const { thema, setThemaContent } = useThemaContext();
   const { setQuestionLength } = useTrainingContext();
   const { setSurface } = useSurfaceContext();
+  useEffect(() => {
+    setThemaContent(ResidentAnesthetic);
+  }, []);
   const ListNode = ({ question }: { question: Question }) => {
     const [isOpen, setIsOpen] = useState(false);
     const handleClick = () => {
@@ -52,30 +56,29 @@ export const Home = () => {
       </div>
     );
   };
-  const navigation = useNavigate();
   const changeThema = () => {
     // このテーマの切り替えはproviderの方のファイルに移動させる
     switch (thema.index) {
-      case 1:
-        setThemaContent(KokushiEnglish);
-        document.title = KokushiEnglish.title;
-        return;
-      case 2:
-        setThemaContent(KokushiSign);
-        document.title = KokushiSign.title;
-        return;
-      case 3:
-        setThemaContent(KokushiDrug);
-        document.title = KokushiDrug.title;
-        return;
-      case 4:
-        setThemaContent(KokushiDermadrome);
-        document.title = KokushiDermadrome.title;
-        return;
-      case 5:
-        setThemaContent(KokushiYokomoji);
-        document.title = KokushiYokomoji.title;
-        return;
+      // case 1:
+      //   setThemaContent(KokushiEnglish);
+      //   document.title = KokushiEnglish.title;
+      //   return;
+      // case 2:
+      //   setThemaContent(KokushiSign);
+      //   document.title = KokushiSign.title;
+      //   return;
+      // case 3:
+      //   setThemaContent(KokushiDrug);
+      //   document.title = KokushiDrug.title;
+      //   return;
+      // case 4:
+      //   setThemaContent(KokushiDermadrome);
+      //   document.title = KokushiDermadrome.title;
+      //   return;
+      // case 5:
+      //   setThemaContent(KokushiYokomoji);
+      //   document.title = KokushiYokomoji.title;
+      //   return;
       default:
         return;
     }

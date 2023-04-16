@@ -17,7 +17,12 @@ const ThemaContext = React.createContext<ThemaContext>({
 export const ThemaContextProvider = ({ children }: { children: ReactNode }) => {
   const [thema, setThema] = useState<ThemaContent>(KokushiYokomoji);
   const setThemaContent = (headerContent: ThemaContent) => {
-    setThema(headerContent);
+    const content: ThemaContent = {
+      index: headerContent.index,
+      title: headerContent.title,
+      data: headerContent.data.filter((data) => data.question),
+    };
+    setThema(content);
   };
   useEffect(() => {
     document.title = KokushiYokomoji.title;
