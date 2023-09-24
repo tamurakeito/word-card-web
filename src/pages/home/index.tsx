@@ -15,6 +15,7 @@ import { useSurfaceContext } from "component/surface-provider";
 // import KokushiDrug from "data/kokushi-drug.json";
 // import KokushiDermadrome from "data/kokushi-dermadrome.json";
 // import ResidentAnesthetic from "data/resident-anesthetic.json";
+
 import Hangul from "data/hangul.json";
 
 export const Home = () => {
