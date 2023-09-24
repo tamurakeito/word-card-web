@@ -14,14 +14,15 @@ import { useSurfaceContext } from "component/surface-provider";
 // import KokushiSign from "data/kokushi-sign.json";
 // import KokushiDrug from "data/kokushi-drug.json";
 // import KokushiDermadrome from "data/kokushi-dermadrome.json";
-import ResidentAnesthetic from "data/resident-anesthetic.json";
+// import ResidentAnesthetic from "data/resident-anesthetic.json";
+import Hangul from "data/hangul.json";
 
 export const Home = () => {
   const { thema, setThemaContent } = useThemaContext();
   const { setQuestionLength } = useTrainingContext();
   const { setSurface } = useSurfaceContext();
   useEffect(() => {
-    setThemaContent(ResidentAnesthetic);
+    setThemaContent(Hangul);
   }, []);
   const ListNode = ({ question }: { question: Question }) => {
     const [isOpen, setIsOpen] = useState(false);
