@@ -17,6 +17,7 @@ import { useSurfaceContext } from "component/surface-provider";
 // import ResidentAnesthetic from "data/resident-anesthetic.json";
 
 import Hangul from "data/hangul.json";
+import Hangul2 from "data/hangul2.json";
 
 export const Home = () => {
   const { thema, setThemaContent } = useThemaContext();
@@ -25,6 +26,9 @@ export const Home = () => {
   useEffect(() => {
     setThemaContent(Hangul);
   }, []);
+  useEffect(() => {
+    document.title = thema.title;
+  }, [thema]);
   const ListNode = ({ question }: { question: Question }) => {
     const [isOpen, setIsOpen] = useState(false);
     const handleClick = () => {
@@ -61,14 +65,12 @@ export const Home = () => {
   const changeThema = () => {
     // このテーマの切り替えはproviderの方のファイルに移動させる
     switch (thema.index) {
-      // case 1:
-      //   setThemaContent(KokushiEnglish);
-      //   document.title = KokushiEnglish.title;
-      //   return;
-      // case 2:
-      //   setThemaContent(KokushiSign);
-      //   document.title = KokushiSign.title;
-      //   return;
+      case 1:
+        setThemaContent(Hangul2);
+        return;
+      case 2:
+        setThemaContent(Hangul);
+        return;
       // case 3:
       //   setThemaContent(KokushiDrug);
       //   document.title = KokushiDrug.title;
