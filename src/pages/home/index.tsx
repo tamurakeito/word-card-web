@@ -18,6 +18,7 @@ import { useSurfaceContext } from "component/surface-provider";
 
 import Hangul from "data/hangul.json";
 import Hangul2 from "data/hangul2.json";
+import FrequentPhrase from "data/frequent-phrases.json";
 
 export const Home = () => {
   const { thema, setThemaContent } = useThemaContext();
@@ -69,12 +70,11 @@ export const Home = () => {
         setThemaContent(Hangul2);
         return;
       case 2:
+        setThemaContent(FrequentPhrase);
+        return;
+      case 3:
         setThemaContent(Hangul);
         return;
-      // case 3:
-      //   setThemaContent(KokushiDrug);
-      //   document.title = KokushiDrug.title;
-      //   return;
       // case 4:
       //   setThemaContent(KokushiDermadrome);
       //   document.title = KokushiDermadrome.title;
