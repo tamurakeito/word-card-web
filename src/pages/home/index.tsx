@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Text } from "atom/text";
 import { Spacer } from "atom/spacer";
 import { Button } from "atom/button";
-import { Question } from "types/types";
+import { Question, ThemaContent } from "types/types";
 import "./index.scss";
 import { Play } from "react-feather";
 import { useThemaContext } from "component/thema-provider";
@@ -16,6 +16,8 @@ import { useSurfaceContext } from "component/surface-provider";
 // import KokushiDermadrome from "data/kokushi-dermadrome.json";
 // import ResidentAnesthetic from "data/resident-anesthetic.json";
 
+import HerbalMedicine from "data/herbal-medicine.json";
+
 import Hangul from "data/hangul.json";
 import Hangul2 from "data/hangul2.json";
 import FrequentPhrase from "data/frequent-phrases.json";
@@ -25,7 +27,7 @@ export const Home = () => {
   const { setQuestionLength } = useTrainingContext();
   const { setSurface } = useSurfaceContext();
   useEffect(() => {
-    setThemaContent(Hangul);
+    setThemaContent(HerbalMedicine);
   }, []);
   useEffect(() => {
     document.title = thema.title;
@@ -63,26 +65,25 @@ export const Home = () => {
       </div>
     );
   };
+  const setThema = (thema: ThemaContent) => {
+    setThemaContent(thema);
+    document.title = thema.title;
+  };
   const changeThema = () => {
     // このテーマの切り替えはproviderの方のファイルに移動させる
     switch (thema.index) {
+      case 0:
+        setThema(Hangul);
+        return;
       case 1:
-        setThemaContent(Hangul2);
+        setThema(Hangul2);
         return;
       case 2:
-        setThemaContent(FrequentPhrase);
+        setThema(FrequentPhrase);
         return;
       case 3:
-        setThemaContent(Hangul);
+        setThema(HerbalMedicine);
         return;
-      // case 4:
-      //   setThemaContent(KokushiDermadrome);
-      //   document.title = KokushiDermadrome.title;
-      //   return;
-      // case 5:
-      //   setThemaContent(KokushiYokomoji);
-      //   document.title = KokushiYokomoji.title;
-      //   return;
       default:
         return;
     }
