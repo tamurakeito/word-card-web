@@ -9,18 +9,18 @@ import { useThemaContext } from "component/thema-provider";
 import { useTrainingContext } from "component/training-provider";
 import { useSurfaceContext } from "component/surface-provider";
 
-// import KokushiYokomoji from "data/kokushi-yokomoji.json";
-// import KokushiEnglish from "data/kokushi-english.json";
-// import KokushiSign from "data/kokushi-sign.json";
-// import KokushiDrug from "data/kokushi-drug.json";
-// import KokushiDermadrome from "data/kokushi-dermadrome.json";
-// import ResidentAnesthetic from "data/resident-anesthetic.json";
-
 import HerbalMedicine from "data/herbal-medicine.json";
 
 import Hangul from "data/hangul.json";
 import Hangul2 from "data/hangul2.json";
 import FrequentPhrase from "data/frequent-phrases.json";
+
+import KokushiYokomoji from "data/kokushi-yokomoji.json";
+// import KokushiEnglish from "data/kokushi-english.json";
+import KokushiSign from "data/kokushi-sign.json";
+// import KokushiDrug from "data/kokushi-drug.json";
+import KokushiDermadrome from "data/kokushi-dermadrome.json";
+// import ResidentAnesthetic from "data/resident-anesthetic.json";
 
 export const Home = () => {
   const { thema, setThemaContent } = useThemaContext();
@@ -69,24 +69,14 @@ export const Home = () => {
     setThemaContent(thema);
     document.title = thema.title;
   };
+  const themaList : Array<ThemaContent> = [
+    HerbalMedicine,KokushiYokomoji,KokushiSign,KokushiDermadrome,
+    Hangul,Hangul2,FrequentPhrase
+  ];
+  const [themaIndex, setThemaIndex] = useState(0);
   const changeThema = () => {
-    // このテーマの切り替えはproviderの方のファイルに移動させる
-    switch (thema.index) {
-      case 0:
-        setThema(Hangul);
-        return;
-      case 1:
-        setThema(Hangul2);
-        return;
-      case 2:
-        setThema(FrequentPhrase);
-        return;
-      case 3:
-        setThema(HerbalMedicine);
-        return;
-      default:
-        return;
-    }
+    setThemaIndex(themaIndex + 1 < themaList.length ? themaIndex + 1 : 0);
+    setThema(themaList[themaIndex])
   };
   return (
     <div className="home">
