@@ -9,6 +9,7 @@ import { useThemaContext } from "component/thema-provider";
 import { useTrainingContext } from "component/training-provider";
 import { useSurfaceContext } from "component/surface-provider";
 
+import PsychiatricDrug from "data/psychiatric-drug.json";
 import HerbalMedicine from "data/herbal-medicine.json";
 
 import Hangul from "data/hangul.json";
@@ -27,7 +28,7 @@ export const Home = () => {
   const { setQuestionLength } = useTrainingContext();
   const { setSurface } = useSurfaceContext();
   useEffect(() => {
-    setThemaContent(HerbalMedicine);
+    setThemaContent(themaList[0]);
   }, []);
   useEffect(() => {
     document.title = thema.title;
@@ -69,14 +70,20 @@ export const Home = () => {
     setThemaContent(thema);
     document.title = thema.title;
   };
-  const themaList : Array<ThemaContent> = [
-    HerbalMedicine,KokushiYokomoji,KokushiSign,KokushiDermadrome,
-    Hangul,Hangul2,FrequentPhrase
+  const themaList: Array<ThemaContent> = [
+    PsychiatricDrug,
+    HerbalMedicine,
+    KokushiYokomoji,
+    KokushiSign,
+    KokushiDermadrome,
+    Hangul,
+    Hangul2,
+    FrequentPhrase,
   ];
   const [themaIndex, setThemaIndex] = useState(0);
   const changeThema = () => {
     setThemaIndex(themaIndex + 1 < themaList.length ? themaIndex + 1 : 0);
-    setThema(themaList[themaIndex])
+    setThema(themaList[themaIndex]);
   };
   return (
     <div className="home">
