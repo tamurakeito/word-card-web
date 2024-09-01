@@ -77,7 +77,7 @@ export const Home = () => {
   const [themaIndex, setThemaIndex] = useState(0);
   const changeThema = () => {
     setThemaIndex(themaIndex + 1 < themaList.length ? themaIndex + 1 : 0);
-    setThema(themaList[themaIndex])
+    setThema(themaList[themaIndex]);
   };
   return (
     <div className="home">
