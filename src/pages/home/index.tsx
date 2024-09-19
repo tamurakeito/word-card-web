@@ -22,6 +22,7 @@ import { useSurfaceContext } from "component/surface-provider";
 // import KokushiDermadrome from "data/kokushi-dermadrome.json";
 // import ResidentAnesthetic from "data/resident-anesthetic.json";
 
+import InteriorDesigner from "data/interior-designer.json";
 import KoreanWords1 from "data/korean-words1.json";
 
 export const Home = () => {
@@ -29,6 +30,7 @@ export const Home = () => {
   const { setQuestionLength } = useTrainingContext();
   const { setSurface } = useSurfaceContext();
   const themaList : Array<ThemaContent> = [
+    InteriorDesigner,
     KoreanWords1
   ];
   useEffect(() => {
