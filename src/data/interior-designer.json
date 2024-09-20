@@ -123,6 +123,14 @@
       "answer": ["ウィリアム・モリス", "柳宗悦"]
     },
     {
+      "question": "藤井厚二による設計・日本の伝統的な住まいの特徴を活かす一方m近代的な機能分布も考慮した環境共生住宅の原点とも言われる建物",
+      "answer": ["聴竹居"]
+    },
+    {
+      "question": "白塗りの外観や立体的な空間の組み立てにモダニズム建築の特徴が表されている自邸を建てた建築家",
+      "answer": ["土浦亀城（土浦亀城邸）"]
+    },
+    {
       "question": "戦後の住宅不足解消策として1955年に設立された組織",
       "answer": ["日本住宅公団"]
     },
@@ -1086,180 +1094,32 @@
       "answer": ["約2.5~4倍"]
     },
     {
-      "question": "",
-      "answer": [""]
+      "question": "窓枠の両側に突っ張らせ、伸縮ができるポール状のレール・出窓などにファッション性の高いスタイルカーテンを装着する際に使用される",
+      "answer": ["テンションポール"]
     },
     {
-      "question": "",
-      "answer": [""]
+      "question": "脇に寄せたカーテンを束ねて止めつけるもの",
+      "answer": ["タッセル"]
     },
     {
-      "question": "",
-      "answer": [""]
+      "question": "スタイルカーテン：裾に湾曲をつけて窓の下側が見えるスタイル",
+      "answer": ["スカラップ"]
     },
     {
-      "question": "",
-      "answer": [""]
+      "question": "ローマンシェード：引き上げると裾が丸みを帯びる・優しく優雅な雰囲気で、腰窓や出窓に適したスタイル",
+      "answer": ["バルーン"]
     },
     {
-      "question": "",
-      "answer": [""]
+      "question": "ローマンシェード：シェード全体に細かいタックをつけ、引き上げると豊かなウェーブができる豪華なスタイル・劇場やホテルのロビーでおろしたままの状態で使われることが多い",
+      "answer": ["オーストリアン"]
     },
     {
-      "question": "",
-      "answer": [""]
+      "question": "ローマンシェード：中央が引き絞られた独特な形",
+      "answer": ["ムース"]
     },
     {
-      "question": "",
-      "answer": [""]
-    },
-    {
-      "question": "",
-      "answer": [""]
-    },
-    {
-      "question": "",
-      "answer": [""]
-    },
-    {
-      "question": "",
-      "answer": [""]
-    },
-    {
-      "question": "",
-      "answer": [""]
-    },
-    {
-      "question": "",
-      "answer": [""]
-    },
-    {
-      "question": "",
-      "answer": [""]
-    },
-    {
-      "question": "",
-      "answer": [""]
-    },
-    {
-      "question": "",
-      "answer": [""]
-    },
-    {
-      "question": "",
-      "answer": [""]
-    },
-    {
-      "question": "",
-      "answer": [""]
-    },
-    {
-      "question": "",
-      "answer": [""]
-    },
-    {
-      "question": "",
-      "answer": [""]
-    },
-    {
-      "question": "",
-      "answer": [""]
-    },
-    {
-      "question": "",
-      "answer": [""]
-    },
-    {
-      "question": "",
-      "answer": [""]
-    },
-    {
-      "question": "",
-      "answer": [""]
-    },
-    {
-      "question": "",
-      "answer": [""]
-    },
-    {
-      "question": "",
-      "answer": [""]
-    },
-    {
-      "question": "",
-      "answer": [""]
-    },
-    {
-      "question": "",
-      "answer": [""]
-    },
-    {
-      "question": "",
-      "answer": [""]
-    },
-    {
-      "question": "",
-      "answer": [""]
-    },
-    {
-      "question": "",
-      "answer": [""]
-    },
-    {
-      "question": "",
-      "answer": [""]
-    },
-    {
-      "question": "",
-      "answer": [""]
-    },
-    {
-      "question": "",
-      "answer": [""]
-    },
-    {
-      "question": "",
-      "answer": [""]
-    },
-    {
-      "question": "",
-      "answer": [""]
-    },
-    {
-      "question": "",
-      "answer": [""]
-    },
-    {
-      "question": "",
-      "answer": [""]
-    },
-    {
-      "question": "",
-      "answer": [""]
-    },
-    {
-      "question": "",
-      "answer": [""]
-    },
-    {
-      "question": "",
-      "answer": [""]
-    },
-    {
-      "question": "",
-      "answer": [""]
-    },
-    {
-      "question": "",
-      "answer": [""]
-    },
-    {
-      "question": "",
-      "answer": [""]
-    },
-    {
-      "question": "",
-      "answer": [""]
+      "question": "引き上げるとボトム部分に窓幅を中心とした半円のシルエットができる・窓の幅１に対し窓の高さ1.7以上が必要で縦長の窓に適したスタイル",
+      "answer": ["ピーコック"]
     },
     {
       "question": "掛軸を表装に仕立てること（ふた通りの言い方で）",
@@ -1443,6 +1303,17 @@
     {
       "question": "節水便器の１回あたりの使用水量",
       "answer": ["4L"]
+    },
+    {
+      "question": "給水圧：一般水栓と、シャワー金具やトイレの洗浄弁",
+      "answer": [
+        "一般水栓：30kPa程度",
+        "シャワー金具やトイレの洗浄弁：最低70kPa"
+      ]
+    },
+    {
+      "question": "水受け容器内などに溜まった水などが給水管内に生じた負圧による吸引作用により給水管内に逆流すること",
+      "answer": ["逆サイホン現象","これを防止する→バキュームブレーカー。チャッキ弁"]
     },
     {
       "question": "光束法による平均照度の求め方",
