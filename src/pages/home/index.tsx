@@ -22,22 +22,23 @@ import { useSurfaceContext } from "component/surface-provider";
 // import KokushiDermadrome from "data/kokushi-dermadrome.json";
 // import ResidentAnesthetic from "data/resident-anesthetic.json";
 
-import InteriorDesigner from "data/interior-designer.json";
+// import InteriorDesigner from "data/interior-designer.json";
 import KoreanWords1 from "data/korean-words1.json";
+import KoreanWords2 from "data/korean-words2.json";
 
 export const Home = () => {
   const { thema, setThemaContent } = useThemaContext();
   const { setQuestionLength } = useTrainingContext();
   const { setSurface } = useSurfaceContext();
   const themaList : Array<ThemaContent> = [
-    InteriorDesigner,
-    KoreanWords1
+    KoreanWords1,
+    KoreanWords2
   ];
   useEffect(() => {
     setThemaContent(themaList[0]);
   }, []);
   useEffect(() => {
-    document.title = thema.title;
+    document.title = !!thema ? thema.title : "";
   }, [thema]);
   const ListNode = ({ question }: { question: Question }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -65,8 +66,8 @@ export const Home = () => {
           <Text type="head">{question.question}</Text>
         </div>
         <div className="node-body">
-          {question.answer.map((item) => (
-            <Text type="body">{item}</Text>
+          {question.answer.map((item, index) => (
+            <Text key={index} type="body">{item}</Text>
           ))}
         </div>
       </div>
@@ -90,16 +91,16 @@ export const Home = () => {
         }}
       >
         <Spacer height={50} />
-        <Text type="title">{thema.title}</Text>
+        <Text type="title">{!!thema ? thema.title : ""}</Text>
         {/* <Text type="subtitle">
           長い横文字の医学用語でめっちゃイキれるようになります
         </Text> */}
         <Spacer height={30} />
       </div>
-      {thema.data.map((item, index) => (
+      {!!thema && thema.data.map((item, index) => (
         <ListNode key={index} question={item} />
       ))}
-      <Spacer height={120} />
+      <Spacer height={180} />
       <div className="home-bottom-fixed">
         <Button
           onClick={() => {
@@ -111,8 +112,11 @@ export const Home = () => {
         >
           ミニテスト
         </Button>
-        <Button onClick={changeThema} classes={["home-button"]} color={"grey"}>
+        <Button onClick={changeThema} classes={["home-button"]} color={"mouse"}>
           切り替える
+        </Button>
+        <Button onClick={changeThema} classes={["home-button"]} color={"grey"}>
+          統合テスト
         </Button>
       </div>
     </div>

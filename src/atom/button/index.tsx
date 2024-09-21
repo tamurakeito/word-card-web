@@ -15,7 +15,7 @@ export const Button = ({
   onDoubleClick?: () => void;
   classes?: Array<string>;
   bottomFix?: boolean;
-  color?: "black" | "grey";
+  color?: "black" | "mouse" | "grey";
 }) => {
   const clazz = classes
     ? bottomFix

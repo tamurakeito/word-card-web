@@ -31,7 +31,7 @@ export const Training = () => {
 
   useEffect(() => {
     const arr: Array<Question> = [];
-    thema.data.map((item, index) => {
+    !!thema && thema.data.map((item, index) => {
       arr[index] = item;
       return undefined;
     });

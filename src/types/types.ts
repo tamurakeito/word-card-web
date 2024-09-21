@@ -4,7 +4,7 @@ export type Question = {
 };
 
 export type ThemaContent = {
-  index: number;
+  // index: number;
   title: string;
   data: Array<Question>;
 };
