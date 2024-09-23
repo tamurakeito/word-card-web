@@ -1,0 +1,50 @@
+{
+  "title": "韓国語・よく使うフレーズ",
+  "data": [
+    {
+      "question": "안녕하세요",
+      "answer": ["おはようございます", "こんにちは", "こんばんは"]
+    },
+    { "question": "만나서 반갑습니다", "answer": ["お会いできて嬉しいです"] },
+    { "question": "감사합니다", "answer": ["ありがとうございます"] },
+    {
+      "question": "안녕히 계셰요",
+      "answer": ["さようなら（その場に残る人に）"]
+    },
+    {
+      "question": "안녕히 가세요",
+      "answer": ["さようなら（その場を去る人に）"]
+    },
+    { "question": "미안합니다", "answer": ["すみません"] },
+    { "question": "죄송합니다", "answer": ["申し訳ありません"] },
+    { "question": "저기요", "answer": ["すみません（Excuse me.）"] },
+    { "question": "여기요", "answer": ["ここです"] },
+    { "question": "주게요", "answer": ["ください"] },
+    { "question": "네", "answer": ["はい"] },
+    { "question": "예", "answer": ["はい（より堅い表現）"] },
+    { "question": "아뇨", "answer": ["いいえ"] },
+    { "question": "생일 축하합니다", "answer": ["誕生日おめでとうございます"] },
+    { "question": "하이팅", "answer": ["ファイト"] },
+    { "question": "수고하세요", "answer": ["お疲れ様です"] },
+    { "question": "어떠세요", "answer": ["いかがですか"] },
+    {
+      "question": "다시 말씀해 주시겠어요?",
+      "answer": ["もう一度言っていただけませんか"]
+    },
+    { "question": "맞어요.", "answer": ["その通りです"] },
+    { "question": "선생님 덕분이에요", "answer": ["先生のおかげです"] },
+    { "question": "화장실은 어디예요", "answer": ["トイレはどこですか"] },
+    { "question": "좋아요", "answer": ["いいです"] },
+    { "question": "사랑해요", "answer": ["大好きです"] },
+    { "question": "아직 멀었어요", "answer": ["まだまだ（遠い）です"] },
+    { "question": "정말 맛있어요", "answer": ["本当に美味しいです"] },
+    { "question": "멋있어요", "answer": ["素敵です"] },
+    { "question": "잘생겼어요", "answer": ["イケメンですね"] },
+    { "question": "예뻐요", "answer": ["可愛いです 綺麗です"] },
+    { "question": "대단해요", "answer": ["すごいです"] },
+    { "question": "최고예요", "answer": ["最高です"] },
+    { "question": "재미있어요", "answer": ["面白いです"] },
+    { "question": "어울려요", "answer": ["似合っています"] },
+    { "question": "젊어 보여요", "answer": ["若く見えます"] }
+  ]
+}

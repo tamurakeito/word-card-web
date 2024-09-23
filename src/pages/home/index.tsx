@@ -8,6 +8,7 @@ import { Play } from "react-feather";
 import { useThemaContext } from "component/thema-provider";
 import { useTrainingContext } from "component/training-provider";
 import { useSurfaceContext } from "component/surface-provider";
+import { themaList } from "data/data";
 
 // import HerbalMedicine from "data/herbal-medicine.json";
 
@@ -23,17 +24,11 @@ import { useSurfaceContext } from "component/surface-provider";
 // import ResidentAnesthetic from "data/resident-anesthetic.json";
 
 // import InteriorDesigner from "data/interior-designer.json";
-import KoreanWords1 from "data/korean-words1.json";
-import KoreanWords2 from "data/korean-words2.json";
 
 export const Home = () => {
   const { thema, setThemaContent } = useThemaContext();
   const { setQuestionLength } = useTrainingContext();
   const { setSurface } = useSurfaceContext();
-  const themaList : Array<ThemaContent> = [
-    KoreanWords1,
-    KoreanWords2
-  ];
   useEffect(() => {
     setThemaContent(themaList[0]);
   }, []);
@@ -67,7 +62,9 @@ export const Home = () => {
         </div>
         <div className="node-body">
           {question.answer.map((item, index) => (
-            <Text key={index} type="body">{item}</Text>
+            <Text key={index} type="body">
+              {item}
+            </Text>
           ))}
         </div>
       </div>
@@ -81,6 +78,17 @@ export const Home = () => {
   const changeThema = () => {
     setThemaIndex(themaIndex + 1 < themaList.length ? themaIndex + 1 : 0);
     setThema(themaList[themaIndex]);
+  };
+  const integrationThema = () => {
+    let data: Array<Question> = [];
+    themaList.forEach((e) => {
+      data.push(...e.data);
+    });
+    setThema({
+      title: "統合テスト",
+      data: data,
+    });
+    setSurface("training");
   };
   return (
     <div className="home">
@@ -97,9 +105,10 @@ export const Home = () => {
         </Text> */}
         <Spacer height={30} />
       </div>
-      {!!thema && thema.data.map((item, index) => (
-        <ListNode key={index} question={item} />
-      ))}
+      {!!thema &&
+        thema.data.map((item, index) => (
+          <ListNode key={index} question={item} />
+        ))}
       <Spacer height={180} />
       <div className="home-bottom-fixed">
         <Button
@@ -115,7 +124,11 @@ export const Home = () => {
         <Button onClick={changeThema} classes={["home-button"]} color={"mouse"}>
           切り替える
         </Button>
-        <Button onClick={changeThema} classes={["home-button"]} color={"grey"}>
+        <Button
+          onClick={integrationThema}
+          classes={["home-button"]}
+          color={"grey"}
+        >
           統合テスト
         </Button>
       </div>

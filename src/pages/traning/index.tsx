@@ -31,10 +31,11 @@ export const Training = () => {
 
   useEffect(() => {
     const arr: Array<Question> = [];
-    !!thema && thema.data.map((item, index) => {
-      arr[index] = item;
-      return undefined;
-    });
+    !!thema &&
+      thema.data.map((item, index) => {
+        arr[index] = item;
+        return undefined;
+      });
     setOriginalArr(arr);
   }, []);
 
