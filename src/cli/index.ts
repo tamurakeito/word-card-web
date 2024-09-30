@@ -2,13 +2,16 @@ import { Question } from "../types/types";
 import { themaList } from "../data/data";
 import { readLineAsync } from "./common/stdin";
 
+const shuffleItems = (arr: Array<Question>): Array<Question> => {
+  return [...arr].sort(() => 0.5 - Math.random());
+};
+
 const getRandomItems = (
   arr: Array<Question>,
   count: number
 ): Array<Question> => {
-  const len = arr.length;
-  const shuffled = [...arr].sort(() => 0.5 - Math.random());
-  return shuffled.slice(0, count < len ? count : len);
+  const shuffled = shuffleItems(arr);
+  return shuffled.slice(0, Math.min(count, arr.length));
 };
 
 const chooseData = async () => {
@@ -38,8 +41,9 @@ const chooseData = async () => {
 
 const chooseMode = async (data: Array<Question>) => {
   console.log("1: 5問テスト");
-  console.log("2: 10問テスト");
-  console.log("3: 全問テスト");
+  console.log("2: 15問テスト");
+  console.log("3: 25問テスト");
+  console.log("4: 全問テスト");
   let array: Array<Question> | undefined = undefined;
   const input = await readLineAsync(">> ");
   console.log("");
@@ -47,8 +51,10 @@ const chooseMode = async (data: Array<Question>) => {
     if (Number(input) === 1) {
       array = getRandomItems(data, 5);
     } else if (Number(input) === 2) {
-      array = getRandomItems(data, 10);
+      array = getRandomItems(data, 15);
     } else if (Number(input) === 3) {
+      array = getRandomItems(data, 25);
+    } else if (Number(input) === 4) {
       array = data;
     } else {
       console.log("正しい番号を選択してください。");
@@ -113,6 +119,7 @@ const main = async () => {
           console.log(`\n残り${selectedData.length}問！`);
         }
         selectedData.sort(() => 0.5 - Math.random());
+        count = 0;
       } else {
         console.log("-> ×");
         if (selectedData.length - 1 > count) {
@@ -127,6 +134,7 @@ const main = async () => {
       console.log("おわり！");
       return;
     }
+    // console.log(selectedData);
   }
 };
 

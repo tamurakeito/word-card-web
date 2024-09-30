@@ -90,7 +90,6 @@ export const Home = () => {
       title: "統合テスト",
       data: data,
     });
-    // setSurface("training");
   };
   const [isActive, setIsActive] = useState(false);
   return (
