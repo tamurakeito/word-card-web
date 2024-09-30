@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Question } from "types/types";
-import { Text } from "atom/text";
-import { Button } from "atom/button";
+import { Text } from "ui/atom/text";
+import { Button } from "ui/atom/button";
 import "./index.scss";
 import { useThemaContext } from "component/thema-provider";
 import { useTrainingContext } from "component/training-provider";
@@ -17,25 +17,30 @@ export const Training = () => {
 
   // 配列からランダムに抽出する
   const RandomSampling = (arr: Array<Question>) => {
-    const length = arr.length;
-    const resultLength = length < questionLength ? length : questionLength;
+    const length = Math.min(arr.length, 10);
 
-    for (let i = 0; i < resultLength; i++) {
+    for (let i = 0; i < length; i++) {
       const randomIdx = Math.floor(Math.random() * length);
       let tmpStorage = arr[i];
       arr[i] = arr[randomIdx];
       arr[randomIdx] = tmpStorage;
     }
-    setQuestionArray(arr.slice(0, resultLength));
+    setQuestionArray(arr.slice(0, length));
+  };
+
+  const getRandomItems = (
+    arr: Array<Question>,
+    count: number
+  ): Array<Question> => {
+    const len = arr.length;
+    const shuffled = [...arr].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, count < len ? count : len);
   };
 
   useEffect(() => {
-    const arr: Array<Question> = [];
-    !!thema &&
-      thema.data.map((item, index) => {
-        arr[index] = item;
-        return undefined;
-      });
+    const arr: Array<Question> = thema
+      ? getRandomItems(thema.data, questionLength)
+      : [];
     setOriginalArr(arr);
   }, []);
 
@@ -124,7 +129,7 @@ export const Training = () => {
             }}
           >
             <div>
-              <Text type="title">ミニテスト {originalArr.length}問</Text>
+              <Text type="title">トレーニング：{originalArr.length}問</Text>
               <Text type="subtitle">tap!</Text>
             </div>
           </div>

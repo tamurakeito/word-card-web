@@ -1,0 +1,13 @@
+.fade {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba($color: #fff, $alpha: 0.6);
+  opacity: 0;
+  transition: 0.2s;
+  &.active {
+    opacity: 1;
+  }
+}
