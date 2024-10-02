@@ -126,7 +126,7 @@ export const Home = () => {
           <Button
             onClick={changeThema}
             classes={["home-button"]}
-            color={"grey100"}
+            color={"grey200"}
           >
             切り替える
           </Button>
@@ -136,7 +136,7 @@ export const Home = () => {
               setIsActive(!isActive);
             }}
             classes={["home-button"]}
-            color={"grey200"}
+            color={"grey400"}
           >
             統合テスト
           </Button>
@@ -167,7 +167,17 @@ export const Home = () => {
           classes={["home-button"]}
           color={"grey100"}
         >
-          10問
+          15問
+        </Button>
+        <Button
+          onClick={() => {
+            setQuestionLength(10);
+            setSurface("training");
+          }}
+          classes={["home-button"]}
+          color={"grey200"}
+        >
+          25問
         </Button>
         <Button
           onClick={() => {
@@ -175,7 +185,7 @@ export const Home = () => {
             setSurface("training");
           }}
           classes={["home-button"]}
-          color={"grey200"}
+          color={"grey300"}
         >
           全問
         </Button>
@@ -184,7 +194,7 @@ export const Home = () => {
             setIsActive(!isActive);
           }}
           classes={["home-button"]}
-          color={"grey300"}
+          color={"grey400"}
         >
           もどる
         </Button>

@@ -14,53 +14,75 @@ const getRandomItems = (
   return shuffled.slice(0, Math.min(count, arr.length));
 };
 
-const chooseData = async () => {
-  themaList.forEach((e, index) => {
-    console.log(`${index + 1}: ${e.title}`);
-  });
-  console.log(`${themaList.length + 1}: 全ての問題`);
+const chooseData = async (args?: number) => {
+  const len = themaList.length;
   let array: Array<Question> | undefined = undefined;
-  const input = await readLineAsync(">> ");
-  console.log("");
-  if (!isNaN(Number(input))) {
-    if (0 < Number(input) && Number(input) <= themaList.length) {
-      array = themaList[Number(input) - 1].data;
-    } else if (Number(input) === themaList.length + 1) {
-      array = [];
-      themaList.forEach((e) => {
-        array = array !== undefined ? [...array, ...e.data] : e.data;
-      });
-    } else {
-      console.log("正しい番号を選択してください。");
-    }
+  if (args !== undefined && 1 <= args && args <= len + 1) {
+    const thema = themaList[args - 1];
+    array = thema.data;
+    console.log(`>> ${args}: ${thema.title}\n`);
   } else {
-    console.log("番号を選択してください。");
+    themaList.forEach((e, index) => {
+      console.log(`${index + 1}: ${e.title}`);
+    });
+    console.log(`${len + 1}: 全ての問題`);
+    const input = await readLineAsync(">> ");
+    console.log("");
+    if (!isNaN(Number(input))) {
+      if (0 < Number(input) && Number(input) <= len) {
+        array = themaList[Number(input) - 1].data;
+      } else if (Number(input) === len + 1) {
+        array = [];
+        themaList.forEach((e) => {
+          array = array !== undefined ? [...array, ...e.data] : e.data;
+        });
+      } else {
+        console.log("正しい番号を選択してください。");
+      }
+    } else {
+      console.log("番号を選択してください。");
+    }
   }
   return array;
 };
 
-const chooseMode = async (data: Array<Question>) => {
-  console.log("1: 5問テスト");
-  console.log("2: 15問テスト");
-  console.log("3: 25問テスト");
-  console.log("4: 全問テスト");
+const chooseMode = async (data: Array<Question>, args?: number) => {
   let array: Array<Question> | undefined = undefined;
-  const input = await readLineAsync(">> ");
-  console.log("");
-  if (!isNaN(Number(input))) {
-    if (Number(input) === 1) {
+  const modeList = ["5問テスト", "15問テスト", "25問テスト", "全問テスト"];
+
+  if (args !== undefined && 1 <= args && args <= modeList.length) {
+    const mode = modeList[args - 1];
+    console.log(`>> ${args}: ${mode}\n`);
+    if (args === 1) {
       array = getRandomItems(data, 5);
-    } else if (Number(input) === 2) {
+    } else if (args === 2) {
       array = getRandomItems(data, 15);
-    } else if (Number(input) === 3) {
+    } else if (args === 3) {
       array = getRandomItems(data, 25);
-    } else if (Number(input) === 4) {
+    } else if (args === 4) {
       array = data;
-    } else {
-      console.log("正しい番号を選択してください。");
     }
   } else {
-    console.log("番号を選択してください。");
+    modeList.forEach((mode, index) => {
+      console.log(`${index + 1}: ${mode}`);
+    });
+    const input = await readLineAsync(">> ");
+    console.log("");
+    if (!isNaN(Number(input))) {
+      if (Number(input) === 1) {
+        array = getRandomItems(data, 5);
+      } else if (Number(input) === 2) {
+        array = getRandomItems(data, 15);
+      } else if (Number(input) === 3) {
+        array = getRandomItems(data, 25);
+      } else if (Number(input) === 4) {
+        array = data;
+      } else {
+        console.log("正しい番号を選択してください。");
+      }
+    } else {
+      console.log("番号を選択してください。");
+    }
   }
   return array;
 };
@@ -81,11 +103,14 @@ const trainingData = async (dialog: Question): Promise<boolean> => {
 };
 
 const main = async () => {
+  const argsThema = process.argv[2];
+  const argsMode = process.argv[3];
+
   let originalData: Array<Question>;
   let selectedData: Array<Question>;
   console.log("問題を選択してください");
   for (;;) {
-    const response = await chooseData();
+    const response = await chooseData(Number(argsThema));
     if (response !== undefined) {
       originalData = response;
       break;
@@ -93,9 +118,9 @@ const main = async () => {
     console.log("");
   }
 
-  console.log("モードを選択してくださ");
+  console.log("モードを選択してください");
   for (;;) {
-    const response = await chooseMode(originalData);
+    const response = await chooseMode(originalData, Number(argsMode));
     if (response !== undefined) {
       selectedData = response;
       break;
@@ -134,7 +159,6 @@ const main = async () => {
       console.log("おわり！");
       return;
     }
-    // console.log(selectedData);
   }
 };
 
