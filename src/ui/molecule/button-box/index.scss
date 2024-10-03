@@ -1,0 +1,15 @@
+.button-box {
+  z-index: 100;
+  position: fixed;
+  bottom: 0;
+  width: calc(100% - 16px);
+  background: #fff;
+  * {
+    margin: 9px 0;
+  }
+  transform: translateY(100%);
+  transition: 0.2s;
+  &.active {
+    transform: translateY(0);
+  }
+}
