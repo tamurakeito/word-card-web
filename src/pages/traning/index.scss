@@ -53,3 +53,17 @@
     bottom: 10px;
   }
 }
+
+.minimum-card {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #fff;
+}
+.minimum-button-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}

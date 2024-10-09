@@ -48,7 +48,12 @@ const chooseData = async (args?: number) => {
 
 const chooseMode = async (data: Array<Question>, args?: number) => {
   let array: Array<Question> | undefined = undefined;
-  const modeList = ["5問テスト", "15問テスト", "25問テスト", "全問テスト"];
+  const modeList = [
+    "5問テスト",
+    "15問テスト",
+    "25問テスト",
+    `全問テスト（${data.length}問）`,
+  ];
 
   if (args !== undefined && 1 <= args && args <= modeList.length) {
     const mode = modeList[args - 1];
@@ -76,7 +81,7 @@ const chooseMode = async (data: Array<Question>, args?: number) => {
       } else if (Number(input) === 3) {
         array = getRandomItems(data, 25);
       } else if (Number(input) === 4) {
-        array = data;
+        array = shuffleItems(data);
       } else {
         console.log("正しい番号を選択してください。");
       }
@@ -143,14 +148,14 @@ const main = async () => {
         if (selectedData.length % 5 === 0 && selectedData.length > 0) {
           console.log(`\n残り${selectedData.length}問！`);
         }
-        selectedData.sort(() => 0.5 - Math.random());
+        selectedData = shuffleItems(selectedData);
         count = 0;
       } else {
         console.log("-> ×");
         if (selectedData.length - 1 > count) {
           count += 1;
         } else {
-          selectedData.sort(() => 0.5 - Math.random());
+          selectedData = shuffleItems(selectedData);
           count = 0;
         }
       }

@@ -1,19 +1,24 @@
+import { themaList } from "data/data";
 import React, { ReactNode, useContext, useEffect, useState } from "react";
 import { ThemaContent } from "types/types";
 
 export type ThemaContext = {
-  thema?: ThemaContent;
+  thema: ThemaContent;
   setThemaContent: (thema: ThemaContent) => void;
 };
 
 const ThemaContext = React.createContext<ThemaContext>({
+  thema: {
+    title: "thema-provider unimplement.",
+    data: [],
+  },
   setThemaContent: () => {
-    console.log("tab-provider unimplement.");
+    console.log("thema-provider unimplement.");
   },
 });
 
 export const ThemaContextProvider = ({ children }: { children: ReactNode }) => {
-  const [thema, setThema] = useState<ThemaContent>();
+  const [thema, setThema] = useState<ThemaContent>(themaList[0]);
   const setThemaContent = (headerContent: ThemaContent) => {
     const content: ThemaContent = {
       title: headerContent.title,

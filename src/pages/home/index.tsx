@@ -1,9 +1,11 @@
+import "./index.scss";
 import { useEffect, useState } from "react";
 import { Text } from "ui/atom/text";
 import { Spacer } from "ui/atom/spacer";
 import { Button } from "ui/atom/button";
-import { Question, ThemaContent } from "types/types";
-import "./index.scss";
+import { ModeType, ModeTypes, Question, ThemaContent } from "types/types";
+import { MinimumButton } from "ui/atom/minimum-button";
+import { Center } from "ui/atom/center";
 import { Play } from "react-feather";
 import { useThemaContext } from "component/thema-provider";
 import { useTrainingContext } from "component/training-provider";
@@ -27,12 +29,12 @@ import { ButtonBox } from "ui/molecule/button-box";
 
 // import InteriorDesigner from "data/interior-designer.json";
 
-export const Home = () => {
+export const Home = ({ mode }: { mode: ModeType }) => {
   const { thema, setThemaContent } = useThemaContext();
   const { setQuestionLength } = useTrainingContext();
   const { setSurface } = useSurfaceContext();
   useEffect(() => {
-    setThemaContent(themaList[0]);
+    // setThemaContent(themaList[0]);
   }, []);
   useEffect(() => {
     document.title = !!thema ? thema.title : "";
@@ -92,9 +94,10 @@ export const Home = () => {
     });
   };
   const [isActive, setIsActive] = useState(false);
-  return (
+  return mode === ModeTypes.default ? (
     <>
       <div className="home">
+        {/* 問題数を表示できるようにする */}
         <div
           onDoubleClick={() => {
             setQuestionLength(30);
@@ -161,7 +164,7 @@ export const Home = () => {
         </Button>
         <Button
           onClick={() => {
-            setQuestionLength(10);
+            setQuestionLength(15);
             setSurface("training");
           }}
           classes={["home-button"]}
@@ -171,7 +174,7 @@ export const Home = () => {
         </Button>
         <Button
           onClick={() => {
-            setQuestionLength(10);
+            setQuestionLength(25);
             setSurface("training");
           }}
           classes={["home-button"]}
@@ -200,5 +203,50 @@ export const Home = () => {
         </Button>
       </ButtonBox>
     </>
+  ) : (
+    <div className={"minimum"}>
+      <Center>{!!thema ? thema.title : ""}</Center>
+      {!isActive ? (
+        <Center>
+          <MinimumButton
+            label={"select"}
+            onClick={() => {
+              setIsActive(true);
+            }}
+          />
+          <MinimumButton label={"next >>"} onClick={changeThema} />
+        </Center>
+      ) : (
+        <Center>
+          <MinimumButton
+            label={"15 Q's"}
+            onClick={() => {
+              setQuestionLength(15);
+              setSurface("training");
+            }}
+          />
+          <MinimumButton
+            label={"25 Q's"}
+            onClick={() => {
+              setQuestionLength(25);
+              setSurface("training");
+            }}
+          />
+          <MinimumButton
+            label={`All Q's (${thema?.data.length})`}
+            onClick={() => {
+              setQuestionLength(9999);
+              setSurface("training");
+            }}
+          />
+          <MinimumButton
+            label={"back"}
+            onClick={() => {
+              setIsActive(false);
+            }}
+          />
+        </Center>
+      )}
+    </div>
   );
 };

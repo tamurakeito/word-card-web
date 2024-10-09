@@ -10,3 +10,9 @@ export type ThemaContent = {
 };
 
 export type Surface = "home" | "training";
+
+export const ModeTypes = {
+  default: "default",
+  minimum: "minimum",
+};
+export type ModeType = (typeof ModeTypes)[keyof typeof ModeTypes];

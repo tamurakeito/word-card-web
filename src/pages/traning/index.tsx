@@ -1,14 +1,16 @@
+import "./index.scss";
 import { useEffect, useState } from "react";
-import { Question } from "types/types";
+import { ModeType, ModeTypes, Question } from "types/types";
 import { Text } from "ui/atom/text";
 import { Button } from "ui/atom/button";
-import "./index.scss";
 import { useThemaContext } from "component/thema-provider";
 import { useTrainingContext } from "component/training-provider";
 import { Circle, X } from "react-feather";
 import { useSurfaceContext } from "component/surface-provider";
+import { MinimumButton } from "ui/atom/minimum-button";
+import { Center } from "ui/atom/center";
 
-export const Training = () => {
+export const Training = ({ mode }: { mode: ModeType }) => {
   const { thema } = useThemaContext();
   const { questionLength } = useTrainingContext();
   const { setSurface } = useSurfaceContext();
@@ -114,10 +116,63 @@ export const Training = () => {
       </div>
     );
   };
+  const MinimumCard = ({
+    question,
+    isLast,
+  }: {
+    question: Question;
+    isLast: boolean;
+  }) => {
+    const [isAnswer, setIsAnswer] = useState(false);
+    const [isHidden, setIsHidden] = useState(false);
+    const handleClick = (arr: Array<Question>) => {
+      setIsHidden(true);
+      isLast && RandomSampling(arr);
+    };
+    return isHidden ? (
+      <></>
+    ) : (
+      <div className={"minimum-card"}>
+        {!isAnswer ? (
+          <Center>
+            <MinimumButton
+              label={question.question}
+              onClick={() => {
+                setIsAnswer(true);
+              }}
+            />
+          </Center>
+        ) : (
+          <>
+            <Center>
+              {question.question}
+              {question.answer.map((item, index) => (
+                <span key={index}> {item} </span>
+              ))}
+            </Center>
+            <Center>
+              <MinimumButton
+                label={"○"}
+                onClick={() => {
+                  DeleteQuestion(originalArr, question.question);
+                }}
+              />
+              <MinimumButton
+                label={"×"}
+                onClick={() => {
+                  handleClick(originalArr);
+                }}
+              />
+            </Center>
+          </>
+        )}
+      </div>
+    );
+  };
 
   const [isStarted, setIsStarted] = useState(false);
 
-  return (
+  return mode === ModeTypes.default ? (
     <div className="training">
       <div>
         {!isStarted ? (
@@ -141,7 +196,6 @@ export const Training = () => {
                 onClick={() => {
                   setSurface("home");
                 }}
-                // bottomFix={true}
               >
                 もどる
               </Button>
@@ -168,6 +222,44 @@ export const Training = () => {
           </div>
         )}
       </div>
+    </div>
+  ) : (
+    <div className={"minimum"}>
+      {!isStarted ? (
+        <Center>
+          <MinimumButton
+            label={`training: ${originalArr.length} Q's  >> start`}
+            onClick={() => {
+              RandomSampling(originalArr);
+              setIsStarted(true);
+            }}
+          />
+        </Center>
+      ) : originalArr.length > 0 ? (
+        <>
+          <div className={"minimum-button-area"}>
+            rest {originalArr.length}
+            <MinimumButton
+              label={"back"}
+              onClick={() => {
+                setSurface("home");
+              }}
+            />
+          </div>
+          <Center>
+            {questionArray.map((item, index) => (
+              <MinimumCard key={index} question={item} isLast={index === 0} />
+            ))}
+          </Center>
+        </>
+      ) : (
+        <MinimumButton
+          label={"end."}
+          onClick={() => {
+            setSurface("home");
+          }}
+        />
+      )}
     </div>
   );
 };

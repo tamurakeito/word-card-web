@@ -7,6 +7,7 @@ import {
   SurfaceContextProvider,
   useSurfaceContext,
 } from "component/surface-provider";
+import { ModeTypes } from "types/types";
 
 const App = () => {
   return (
@@ -32,16 +33,22 @@ const RouterSelector = () => {
   return (
     <Routes>
       <Route path="" element={<SurfaceProvider />} />
+      <Route path="minimum" element={<SurfaceProvider minimum={true} />} />
     </Routes>
   );
 };
 
-const SurfaceProvider = () => {
+const SurfaceProvider = ({ minimum }: { minimum?: boolean }) => {
   const { surface } = useSurfaceContext();
-  return (
+  return !minimum ? (
     <>
-      {surface === "home" && <Home />}
-      {surface === "training" && <Training />}
+      {surface === "home" && <Home mode={ModeTypes.default} />}
+      {surface === "training" && <Training mode={ModeTypes.default} />}
+    </>
+  ) : (
+    <>
+      {surface === "home" && <Home mode={ModeTypes.minimum} />}
+      {surface === "training" && <Training mode={ModeTypes.minimum} />}
     </>
   );
 };
