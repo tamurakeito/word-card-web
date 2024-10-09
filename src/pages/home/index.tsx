@@ -34,9 +34,6 @@ export const Home = ({ mode }: { mode: ModeType }) => {
   const { setQuestionLength } = useTrainingContext();
   const { setSurface } = useSurfaceContext();
   useEffect(() => {
-    // setThemaContent(themaList[0]);
-  }, []);
-  useEffect(() => {
     document.title = !!thema ? thema.title : "";
   }, [thema]);
   const ListNode = ({ question }: { question: Question }) => {
@@ -106,9 +103,6 @@ export const Home = ({ mode }: { mode: ModeType }) => {
         >
           <Spacer height={50} />
           <Text type="title">{!!thema ? thema.title : ""}</Text>
-          {/* <Text type="subtitle">
-        長い横文字の医学用語でめっちゃイキれるようになります
-      </Text> */}
           <Spacer height={30} />
         </div>
         {!!thema &&
