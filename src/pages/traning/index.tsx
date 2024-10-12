@@ -1,5 +1,5 @@
 import "./index.scss";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ModeType, ModeTypes, Question } from "types/types";
 import { Text } from "ui/atom/text";
 import { Button } from "ui/atom/button";
@@ -9,6 +9,8 @@ import { Circle, X } from "react-feather";
 import { useSurfaceContext } from "component/surface-provider";
 import { MinimumButton } from "ui/atom/minimum-button";
 import { Center } from "ui/atom/center";
+import { Tooltip } from "ui/atom/tooltip";
+import { CopyClipboard } from "ui/molecule/copy-clipboard";
 
 export const Training = ({ mode }: { mode: ModeType }) => {
   const { thema } = useThemaContext();
@@ -54,12 +56,16 @@ export const Training = ({ mode }: { mode: ModeType }) => {
     setOriginalArr(Arr);
   };
 
+  const divRef = useRef<HTMLDivElement>(null);
+
   const Card = ({
     question,
     isLast,
+    divRef,
   }: {
     question: Question;
     isLast: boolean;
+    divRef: React.RefObject<HTMLDivElement>;
   }) => {
     const [isAnswer, setIsAnswer] = useState(false);
     const [isHidden, setIsHidden] = useState(false);
@@ -67,52 +73,81 @@ export const Training = ({ mode }: { mode: ModeType }) => {
       setIsHidden(true);
       isLast && RandomSampling(arr);
     };
+
+    // 多分だけど、questionArrをひとつずつ減らしていけばいいんだと思う
+
+    useEffect(() => {
+      if (divRef.current) {
+        divRef.current.focus();
+      }
+    }, [isHidden]);
+
+    const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+      if (!isAnswer) {
+        if (event.key === "Enter") {
+          setIsAnswer(true);
+        }
+      } else {
+        if (event.key === "Enter") {
+          handleClick(originalArr);
+        } else if (event.key === "l") {
+          DeleteQuestion(originalArr, question.question);
+        }
+      }
+    };
+
     return isHidden ? (
       <></>
-    ) : !isAnswer ? (
-      <div
-        className="disease"
-        onClick={() => {
-          setIsAnswer(true);
-        }}
-      >
-        <div className="card">
-          <Text type="title">{question.question}</Text>
-        </div>
-      </div>
     ) : (
-      <div
-        className="comment"
-        onClick={() => {
-          handleClick(originalArr);
-        }}
-      >
-        <div className="card">
-          <span>
-            <Text type="title">{question.question}</Text>
-            {question.answer.map((item, index) => (
-              <Text key={index} type="comment">
-                {item}
-              </Text>
-            ))}
-            <div className="button-right-wrong">
-              <Circle
-                className="right"
-                color="#aaccff"
-                onClick={() => {
-                  DeleteQuestion(originalArr, question.question);
-                }}
-              />
-              <X
-                className="wrong"
-                color="#ffaaaa"
-                onClick={() => {
-                  handleClick(originalArr);
-                }}
-              />
+      <div ref={divRef} tabIndex={0} onKeyDown={handleKeyDown}>
+        {!isAnswer ? (
+          <div
+            className="disease"
+            onClick={() => {
+              setIsAnswer(true);
+            }}
+          >
+            <div className="card">
+              <Text type="title">{question.question}</Text>
             </div>
-          </span>
-        </div>
+          </div>
+        ) : (
+          <div
+            className="comment"
+            onClick={() => {
+              // handleClick(originalArr);
+            }}
+          >
+            <div className={"card"}>
+              <span>
+                <CopyClipboard content={question.question}>
+                  <Text type="title">{question.question}</Text>
+                  {question.answer.map((item, index) => (
+                    <Text key={index} type="comment">
+                      {item}
+                    </Text>
+                  ))}
+                </CopyClipboard>
+                <div className="button-right-wrong">
+                  <Circle
+                    className="right"
+                    color="#aaccff"
+                    onClick={() => {
+                      DeleteQuestion(originalArr, question.question);
+                    }}
+                  />
+                  <X
+                    className="wrong"
+                    color="#ffaaaa"
+                    onClick={() => {
+                      handleClick(originalArr);
+                    }}
+                  />
+                </div>
+              </span>
+            </div>
+          </div>
+        )}
       </div>
     );
   };
@@ -205,6 +240,7 @@ export const Training = ({ mode }: { mode: ModeType }) => {
                 key={index}
                 question={item}
                 isLast={index > 0 ? false : true}
+                divRef={divRef}
               />
             ))}
           </>

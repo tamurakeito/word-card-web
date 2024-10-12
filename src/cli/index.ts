@@ -2,6 +2,22 @@ import { Question } from "../types/types";
 import { themaList } from "../data/data";
 import { readLineAsync } from "./common/stdin";
 
+// import readline from "readline";
+import { exec } from "child_process";
+
+// const rl = readline.createInterface({
+//   input: process.stdin,
+//   output: process.stdout,
+// });
+
+// // コマンドキーが押されているかをトラックするフラグ
+// let isCommandPressed = false;
+
+// // 標準入力の設定
+// process.stdin.setRawMode(true);
+// process.stdin.resume();
+// process.stdin.setEncoding("utf8");
+
 const shuffleItems = (arr: Array<Question>): Array<Question> => {
   return [...arr].sort(() => 0.5 - Math.random());
 };
@@ -105,8 +121,15 @@ const trainingData = async (dialog: Question): Promise<boolean> => {
   dialog.answer.forEach((answer: string) => {
     console.log(answer);
   });
-  const input = await readLineAsync("[l/p] >> ");
-  return input === "l";
+  for (;;) {
+    const input = await readLineAsync("[l/p] >> ");
+    if (input === "c") {
+      exec(`echo "${dialog.question}" | pbcopy`);
+      console.log("Copied to clipboard.");
+    } else {
+      return input === "l";
+    }
+  }
 };
 
 const main = async () => {
@@ -143,6 +166,21 @@ const main = async () => {
   for (;;) {
     if (selectedData.length > 0) {
       const dialog = selectedData[count];
+      // // キー入力をリッスン
+      // process.stdin.on("data", (key: Buffer) => {
+      //   const keyString = key.toString(); // Bufferをstringに変換
+      //   if (keyString === "\u001b") {
+      //     // Commandキーが押されるとき (MacのCommandキーが押された際はエスケープシーケンスが発生)
+      //     isCommandPressed = true;
+      //   }
+      //   if (keyString === "c" && isCommandPressed) {
+      //     // Command + Cを感知した場合
+      //     console.log("Command + C detected!");
+      //     exec(`echo "${selectedData[count].question}" | pbcopy`);
+      //     isCommandPressed = false; // リセット
+      //   }
+      // });
+
       const result = await trainingData(dialog);
       if (result) {
         console.log("-> ○");

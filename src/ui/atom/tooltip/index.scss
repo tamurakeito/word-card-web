@@ -1,0 +1,25 @@
+.tooltip {
+  position: absolute;
+  bottom: 125%; /* 吹き出しをボタンの上に配置 */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  color: white;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  white-space: nowrap;
+  z-index: 1;
+  opacity: 0.9;
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* 吹き出しの下に矢印 */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
