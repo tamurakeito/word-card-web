@@ -116,8 +116,8 @@ const prompt = async (msg: string): Promise<string> => {
 };
 
 const trainingData = async (dialog: Question): Promise<boolean> => {
-  await prompt("\x1b[36mQ." + dialog.question);
-  console.log("\x1b[35mA.\x1b[0m");
+  await prompt("\x1b[36mQ.\x1b[0m" + dialog.question);
+  console.log("\x1b[36mA.\x1b[0m");
   dialog.answer.forEach((answer: string) => {
     console.log(answer);
   });
@@ -166,21 +166,6 @@ const main = async () => {
   for (;;) {
     if (selectedData.length > 0) {
       const dialog = selectedData[count];
-      // // キー入力をリッスン
-      // process.stdin.on("data", (key: Buffer) => {
-      //   const keyString = key.toString(); // Bufferをstringに変換
-      //   if (keyString === "\u001b") {
-      //     // Commandキーが押されるとき (MacのCommandキーが押された際はエスケープシーケンスが発生)
-      //     isCommandPressed = true;
-      //   }
-      //   if (keyString === "c" && isCommandPressed) {
-      //     // Command + Cを感知した場合
-      //     console.log("Command + C detected!");
-      //     exec(`echo "${selectedData[count].question}" | pbcopy`);
-      //     isCommandPressed = false; // リセット
-      //   }
-      // });
-
       const result = await trainingData(dialog);
       if (result) {
         console.log("-> ○");
