@@ -9,7 +9,6 @@ import { Circle, X } from "react-feather";
 import { useSurfaceContext } from "component/surface-provider";
 import { MinimumButton } from "ui/atom/minimum-button";
 import { Center } from "ui/atom/center";
-import { Tooltip } from "ui/atom/tooltip";
 import { CopyClipboard } from "ui/molecule/copy-clipboard";
 
 export const Training = ({ mode }: { mode: ModeType }) => {

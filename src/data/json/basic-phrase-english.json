@@ -1,0 +1,125 @@
+{
+  "title": "basic phrase: English",
+  "data": [
+    {
+      "question": "お名前はなんですか？",
+      "answer": ["What is your name?"]
+    },
+    {
+      "question": "出身地はどこですか？",
+      "answer": ["Where are you from?"]
+    },
+    {
+      "question": "どこに住んでいますか？",
+      "answer": ["Where do you live?"]
+    },
+    {
+      "question": "元気ですか？",
+      "answer": ["How are you?"]
+    },
+    {
+      "question": "あなたはどうですか？",
+      "answer": ["How about you?"]
+    },
+    {
+      "question": "初めまして",
+      "answer": ["Nice to meet you."]
+    },
+    {
+      "question": "何をしていますか？",
+      "answer": ["What are you doing?"]
+    },
+    {
+      "question": "〇〇語を話しますか？",
+      "answer": ["Do you speak 〇〇?"]
+    },
+    {
+      "question": "なぜ〇〇語を勉強していますか？",
+      "answer": ["Why are you studying 〇〇?"]
+    },
+    {
+      "question": "なぜなら〇〇だからです",
+      "answer": ["Because it is 〇〇."]
+    },
+    {
+      "question": "どれくらい〇〇語を学んでいますか？",
+      "answer": ["How long have you been learning 〇〇?"]
+    },
+    {
+      "question": "趣味はなんですか？",
+      "answer": ["What are your hobbies?"]
+    },
+    {
+      "question": "〇〇したことはありますか？",
+      "answer": ["Have you ever 〇〇?"]
+    },
+    {
+      "question": "〇〇してもいいですか？",
+      "answer": ["May I 〇〇?"]
+    },
+    {
+      "question": "いつ〇〇しましたか？",
+      "answer": ["When did you 〇〇?"]
+    },
+    {
+      "question": "〇〇が好きですか？",
+      "answer": ["Do you like 〇〇?"]
+    },
+    {
+      "question": "〇〇はどういう意味ですか？",
+      "answer": ["What does 〇〇 mean?"]
+    },
+    {
+      "question": "〇〇ができますか？",
+      "answer": ["Can you 〇〇?"]
+    },
+    {
+      "question": "〇〇がありますか？",
+      "answer": ["Do you have 〇〇?"]
+    },
+    {
+      "question": "もう一度言ってください",
+      "answer": ["Please say that again."]
+    },
+    {
+      "question": "〇〇はいくらですか？",
+      "answer": ["How much is 〇〇?"]
+    },
+    {
+      "question": "〇〇に行きたいです",
+      "answer": ["I want to go to 〇〇."]
+    },
+    {
+      "question": "〇〇まではどうやって行きますか？",
+      "answer": ["How do I get to 〇〇?"]
+    },
+    {
+      "question": "どの〇〇ですか？",
+      "answer": ["Which 〇〇?"]
+    },
+    {
+      "question": "あの方はどなたですか？",
+      "answer": ["Who is that person?"]
+    },
+    {
+      "question": "何時ですか？",
+      "answer": ["What time is it?"]
+    },
+    {
+      "question": "おすすめの料理はなんですか？",
+      "answer": ["What do you recommend?"]
+    },
+    {
+      "question": "これください",
+      "answer": ["I'll take this one."]
+    },
+    {
+      "question": "お会計してください",
+      "answer": ["Please check out."]
+    },
+    {
+      "question": "〇〇していただけますか？",
+      "answer": ["Could you 〇〇?"]
+    }
+  ]
+}

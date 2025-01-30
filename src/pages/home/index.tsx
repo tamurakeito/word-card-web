@@ -14,21 +14,6 @@ import { themaList } from "data/data";
 import { Fade } from "ui/atom/fade";
 import { ButtonBox } from "ui/molecule/button-box";
 
-// import HerbalMedicine from "data/herbal-medicine.json";
-
-// import Hangul from "data/hangul.json";
-// import Hangul2 from "data/hangul2.json";
-// import FrequentPhrase from "data/frequent-phrases.json";
-
-// import KokushiYokomoji from "data/kokushi-yokomoji.json";
-// import KokushiEnglish from "data/kokushi-english.json";
-// import KokushiSign from "data/kokushi-sign.json";
-// import KokushiDrug from "data/kokushi-drug.json";
-// import KokushiDermadrome from "data/kokushi-dermadrome.json";
-// import ResidentAnesthetic from "data/resident-anesthetic.json";
-
-// import InteriorDesigner from "data/interior-designer.json";
-
 export const Home = ({ mode }: { mode: ModeType }) => {
   const { thema, setThemaContent } = useThemaContext();
   const { setQuestionLength } = useTrainingContext();
@@ -109,7 +94,7 @@ export const Home = ({ mode }: { mode: ModeType }) => {
           thema.data.map((item, index) => (
             <ListNode key={index} question={item} />
           ))}
-        <Spacer height={120} />
+        <Spacer height={180} />
         <div className="home-bottom-fixed">
           <Button
             onClick={() => {
