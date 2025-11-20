@@ -1,6 +1,8 @@
 import { ThemaContent } from "types/types";
-import KesyouhinKentei from "./json/kesyouhin-kentei.json"
+import KesyouhinKenteiLv01 from "./json/kesyouhin-kentei-lv01.json"
+import KesyouhinKenteiLv02 from "./json/kesyouhin-kentei-lv02.json"
 
 export const themaList: Array<ThemaContent> = [
-  KesyouhinKentei
+  KesyouhinKenteiLv01,
+  KesyouhinKenteiLv02
 ];
