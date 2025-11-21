@@ -7,7 +7,7 @@ import {
   SurfaceContextProvider,
   useSurfaceContext,
 } from "component/surface-provider";
-import { ModeTypes } from "types/types";
+import { ModeTypes } from "./types/types";
 
 const App = () => {
   return (

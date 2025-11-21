@@ -1,6 +1,6 @@
 import "./index.scss";
 import { useEffect, useRef, useState } from "react";
-import { ModeType, ModeTypes, Question } from "types/types";
+import { ModeType, ModeTypes, Question } from "../../types/types";
 import { Text } from "ui/atom/text";
 import { Button } from "ui/atom/button";
 import { useThemaContext } from "component/thema-provider";

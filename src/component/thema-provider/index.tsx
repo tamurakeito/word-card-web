@@ -1,6 +1,6 @@
 import { themaList } from "data/data";
 import React, { ReactNode, useContext, useEffect, useState } from "react";
-import { ThemaContent } from "types/types";
+import { ThemaContent } from "../../types/types";
 
 export type ThemaContext = {
   thema: ThemaContent;

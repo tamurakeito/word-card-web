@@ -1,5 +1,5 @@
 import React, { ReactNode, useContext, useState } from "react";
-import { Surface } from "types/types";
+import { Surface } from "../../types/types";
 
 export type SurfaceProvider = {
   surface: Surface;

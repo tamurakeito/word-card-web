@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Text } from "ui/atom/text";
 import { Spacer } from "ui/atom/spacer";
 import { Button } from "ui/atom/button";
-import { ModeType, ModeTypes, Question, ThemaContent } from "types/types";
+import { ModeType, ModeTypes, Question, ThemaContent } from "../../types/types";
 import { MinimumButton } from "ui/atom/minimum-button";
 import { Center } from "ui/atom/center";
 import { Play } from "react-feather";
@@ -19,7 +19,7 @@ export const Home = ({ mode }: { mode: ModeType }) => {
   const { setQuestionLength } = useTrainingContext();
   const { setSurface } = useSurfaceContext();
   useEffect(() => {
-    document.title = !!thema ? thema.title : "";
+    document.title = !!thema ? thema.title : "word-card-web";
   }, [thema]);
   const ListNode = ({ question }: { question: Question }) => {
     const [isOpen, setIsOpen] = useState(false);
