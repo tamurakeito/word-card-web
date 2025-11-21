@@ -1,4 +1,4 @@
-import { Button } from "ui/atom/button";
+import { Button } from "../../atom/button";
 import "./index.scss";
 import classNames from "classnames";
 import { ReactNode } from "react";

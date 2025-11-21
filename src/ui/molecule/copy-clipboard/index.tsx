@@ -1,6 +1,6 @@
 import { ReactNode, useRef, useState } from "react";
 import "./index.scss";
-import { Tooltip } from "ui/atom/tooltip";
+import { Tooltip } from "../../atom/tooltip";
 
 export const CopyClipboard = ({
   children,

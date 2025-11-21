@@ -1,15 +1,15 @@
 import "./index.scss";
 import { useEffect, useRef, useState } from "react";
 import { ModeType, ModeTypes, Question } from "../../types/types";
-import { Text } from "ui/atom/text";
-import { Button } from "ui/atom/button";
-import { useThemaContext } from "component/thema-provider";
-import { useTrainingContext } from "component/training-provider";
+import { Text } from "../../ui/atom/text";
+import { Button } from "../../ui/atom/button";
+import { useThemaContext } from "../../component/thema-provider";
+import { useTrainingContext } from "../../component/training-provider";
 import { Circle, X } from "react-feather";
-import { useSurfaceContext } from "component/surface-provider";
-import { MinimumButton } from "ui/atom/minimum-button";
-import { Center } from "ui/atom/center";
-import { CopyClipboard } from "ui/molecule/copy-clipboard";
+import { useSurfaceContext } from "../../component/surface-provider";
+import { MinimumButton } from "../../ui/atom/minimum-button";
+import { Center } from "../../ui/atom/center";
+import { CopyClipboard } from "../../ui/molecule/copy-clipboard";
 
 export const Training = ({ mode }: { mode: ModeType }) => {
   const { thema } = useThemaContext();

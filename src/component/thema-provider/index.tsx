@@ -1,4 +1,4 @@
-import { themaList } from "data/data";
+import { themaList } from "../../data/data";
 import React, { ReactNode, useContext, useEffect, useState } from "react";
 import { ThemaContent } from "../../types/types";
 

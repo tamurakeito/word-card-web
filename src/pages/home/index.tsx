@@ -1,18 +1,18 @@
 import "./index.scss";
 import { useEffect, useState } from "react";
-import { Text } from "ui/atom/text";
-import { Spacer } from "ui/atom/spacer";
-import { Button } from "ui/atom/button";
+import { Text } from "../../ui/atom/text";
+import { Spacer } from "../../ui/atom/spacer";
+import { Button } from "../../ui/atom/button";
 import { ModeType, ModeTypes, Question, ThemaContent } from "../../types/types";
-import { MinimumButton } from "ui/atom/minimum-button";
-import { Center } from "ui/atom/center";
+import { MinimumButton } from "../../ui/atom/minimum-button";
+import { Center } from "../../ui/atom/center";
 import { Play } from "react-feather";
-import { useThemaContext } from "component/thema-provider";
-import { useTrainingContext } from "component/training-provider";
-import { useSurfaceContext } from "component/surface-provider";
-import { themaList } from "data/data";
-import { Fade } from "ui/atom/fade";
-import { ButtonBox } from "ui/molecule/button-box";
+import { useThemaContext } from "../../component/thema-provider";
+import { useTrainingContext } from "../../component/training-provider";
+import { useSurfaceContext } from "../../component/surface-provider";
+import { themaList } from "../../data/data";
+import { Fade } from "../../ui/atom/fade";
+import { ButtonBox } from "../../ui/molecule/button-box";
 
 export const Home = ({ mode }: { mode: ModeType }) => {
   const { thema, setThemaContent } = useThemaContext();
